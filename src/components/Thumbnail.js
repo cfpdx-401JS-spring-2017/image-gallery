@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-// tabular list - show the list vertically
-// list item - display the title of the image, the link (not the  actual image), and description.
+import React from 'react';
+import ThumbnailImage from './ThumbnailImage';
+// float or inline-block list - show "cards" for each image
+// each image card shows a "thumbnail" (~ 100x100 pixel scale) and the title (above or below).
 
 export default function Thumbnail({ poms }) {
   return (
     <ul>
-      thumbnail
+      {poms.map((pom, i) => <ThumbnailImage key={i} {...pom} />)}
     </ul>
   );
 }
