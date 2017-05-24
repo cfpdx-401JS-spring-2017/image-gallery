@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Thumbnail extends Component {
-  constructor(props) {
-    super(props);
+export default function Thumbnail(props) {
 
-    this.state = {
-
-    };
-  }
-
-  render() {
-    return (
-      <div>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <ul className="thumbnail-list">
+        {props.images.map(image => {
+          return <div className="thumbnail-wrapper"> <li className="thumbnail-li" key={image.name}>
+            <img className="thumbnail" src={image.url} alt="../img/broken-glass.jpg"></img>
+            </li>
+          </div>;
+        })}
+      </ul>
+    </div>
+  );
 }
 
-export default Thumbnail;

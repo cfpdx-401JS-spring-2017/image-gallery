@@ -1,20 +1,10 @@
 import React, { Component } from 'react';
 
-class List extends Component {
-  constructor(props) {
-    super(props);
+export default function List(props) {
 
-    this.state = {
-
-    };
-  }
-
-  render() {
-    return (
-      <div>
-      </div>
-    );
-  }
+  return (
+    <div>
+      
+    </div>
+  );
 }
-
-export default List;
