@@ -1,0 +1,46 @@
+.YoungDivvy {
+    height: 100%;
+    width: 100vw;
+    background-color: darkgrey;
+    color: white;
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+img {
+    width: 50vw;
+    max-height: 60vh;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.arrows {
+    border-radius: 100%;
+    border: 5px solid white;
+    width: 10vh;
+    height: 10vh;
+    padding-top: 2vh;
+    margin: 3vh;
+    z-index: 4;
+ 
+}
+
+h5 {
+    font-size: .5em;
+}
+
+.ImageTitle {
+    font-size: .7em;
+}
+
+.exitButton  {
+    position: absolute;
+    top: 0vh;
+    left: 90vw;
+}
