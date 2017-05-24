@@ -5,7 +5,7 @@ import React from 'react';
 export default function ThumbnailImage({ name, description, url }) {
   return (
     <div>
-      <img src={url} />
+      <img src={url} alt={'A pom'} />
       <h2>{name}</h2>
     </div>
   );
