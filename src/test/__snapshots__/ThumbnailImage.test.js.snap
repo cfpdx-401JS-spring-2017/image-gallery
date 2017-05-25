@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Thumbnail Image Pulls up default view 1`] = `
+<div
+  className="thumbnail"
+>
+  <img
+    alt="A pom"
+    src={undefined}
+  />
+  <h2
+    className="name"
+  />
+</div>
+`;

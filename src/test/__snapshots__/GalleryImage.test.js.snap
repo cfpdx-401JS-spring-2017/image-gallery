@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery Image Pulls up default view 1`] = `
+<div
+  className="gallery"
+>
+  <img
+    alt="A pom"
+    src={undefined}
+  />
+  <h2 />
+  <p />
+</div>
+`;
