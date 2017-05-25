@@ -1,10 +1,5 @@
 const images = [
   {
-    title: 'Pouring teapot',
-    description: 'what a nice pour',
-    url: '/img/pouring-teapot.jpg'
-  },
-  {
     title: 'tea leaves in teapot',
     description: 'what nice leaves',
     url: '/img/teainpot.jpg'

@@ -27,25 +27,14 @@ class App extends Component {
       });
   }
 
-  // imageApi
-  //     .then(images => {
-  //       console.log('got images');
-  //   this.setState({
-  //     error: '',
-  //     images
-  //   });
-  // })
-  //     .catch(error => {
-  //       this.setState({
-  //     error
-  //   });
-  // });
-
   render() {
     return (
       <div className="App" >
-        {
-          this.state.images &&
+        <div className="app-header">
+          <h2>Welcome to the Cha'llery</h2>
+          <h3>A photo gallery of <strong>茶</strong></h3>
+        </div>
+        {this.state.images &&
           <Wrapper
             images={this.state.images}
           />
