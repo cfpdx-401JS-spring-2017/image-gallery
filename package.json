@@ -8,8 +8,9 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "node-sass-chokidar": "0.0.1",
     "react-scripts": "1.0.6",
-    "node-sass-chokidar": "0.0.1"
+    "react-test-renderer": "^15.5.4"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
