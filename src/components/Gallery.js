@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import GalleryImage from './GalleryImage';
 import '../styles/Gallery.css';
 
 export default class Gallery extends Component {
+
+  static propTypes = {
+    poms: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string,
+      url: PropTypes.string.isRequired
+    }))
+  };
+
   constructor(props) {
     super(props);
 
@@ -15,8 +25,6 @@ export default class Gallery extends Component {
     const poms = this.props.poms;
     const pom = this.props.poms[this.state.index];
     let index = this.state.index;
-    console.log(poms);
-    console.log(increment);
 
     index += increment;
     if (index === poms.length) {
@@ -24,7 +32,6 @@ export default class Gallery extends Component {
     } if (index === -1 || isNaN(index)) {
       index = poms.length - 1;
     }
-    console.log(index);
     this.setState({ poms: pom });
     this.setState({ index });
   }

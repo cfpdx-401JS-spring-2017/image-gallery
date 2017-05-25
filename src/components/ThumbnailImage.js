@@ -1,7 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/ThumbnailImage.css';
-// float or inline-block list - show "cards" for each image
-// each image card shows a "thumbnail" (~ 100x100 pixel scale) and the title (above or below).
+
+ThumbnailImage.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  url: PropTypes.string.isRequired
+};
 
 export default function ThumbnailImage({ name, description, url }) {
   return (

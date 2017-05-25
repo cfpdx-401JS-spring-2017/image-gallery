@@ -1,6 +1,11 @@
 import React from 'react';
-// tabular list - show the list vertically
-// list item - display the title of the image, the link (not the  actual image), and description.
+import PropTypes from 'prop-types';
+
+ListImage.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  url: PropTypes.string.isRequired
+};
 
 export default function ListImage({ name, description, url }) {
   return (

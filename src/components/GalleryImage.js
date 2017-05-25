@@ -1,10 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/GalleryImage.css';
-// display one image at a time, have left and right arrows to advance/go back
-// Display the title, description and the full-size image.
+
+GalleryImage.propTypes = {
+  poms: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    url: PropTypes.string.isRequired
+  })
+};
 
 export default function GalleryImage({ poms }) {
-  return(
+  return (
     <div className="gallery">
       <img src={poms.url} alt={'A pom'} />
       <h2>{poms.name}</h2>
