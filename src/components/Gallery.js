@@ -7,24 +7,36 @@ export default class Gallery extends Component {
 
     this.state = {
       poms: this.props.poms,
-      current: null
+      index: 0
     };
   }
 
-  nextPom() {
-    this.setState();
+  nextPom(index) {
+    const poms = this.props.poms[index];
+    this.setState({ poms });
   }
 
-  previousPom() {
-    this.setState();
+  previousPom(index) {
+    const poms = this.props.poms[index];
+    this.setState({ poms });
   }
 
   render() {
     const poms = this.props.poms;
-    let index = 0;
+    const index = this.state.index;
     return (
       <div>
-        <GalleryImage poms={ poms[index] }/>
+        <button className="button gallery-btn" onClick={() => (
+          this.previousPom(index.length - 1)
+        )}>
+        Previous
+        </button>
+        <GalleryImage poms={poms[index]} />
+        <button className="button gallery-btn" onClick={() => (
+          this.nextPom(index + 1)
+        )}>
+        Next
+        </button>
       </div>
     );
   }
