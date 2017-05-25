@@ -7,7 +7,7 @@ export default function ThumbnailImage({ name, description, url }) {
   return (
     <div className="thumbnail">
       <img src={url} alt={'A pom'} />
-      <h2>{name}</h2>
+      <h2 className="name">{name}</h2>
     </div>
   );
 }

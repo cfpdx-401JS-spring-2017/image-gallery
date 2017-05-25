@@ -14,7 +14,7 @@ class App extends Component {
 
   componentDidMount() {
     pomsAPI.get()
-    .then(poms => this.setState({ poms }));
+      .then(poms => this.setState({ poms }));
   }
 
   render() {
