@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Thumbnail from './Thumbnail';
 import List from './List';
 import Gallery from './Gallery';
@@ -6,6 +7,10 @@ import Gallery from './Gallery';
 const views = [Thumbnail, List, Gallery];
 
 class Wrapper extends Component {
+
+  static propTypes = {
+    images: PropTypes.array,
+  }
   constructor(props) {
     super(props);
 

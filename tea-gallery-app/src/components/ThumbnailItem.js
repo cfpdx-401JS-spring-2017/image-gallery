@@ -1,4 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+ThumbnailItem.propTypes = {
+  images: PropTypes.array,
+};
 
 export default function ThumbnailItem(props) {
 

@@ -1,4 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+ListItem.propTypes = {
+  images: PropTypes.array,
+};
 
 export default function ListItem(props) {
 

@@ -9,14 +9,12 @@ class App extends Component {
 
     this.state = {
       images: null,
-      error: ''
     };
   }
   componentDidMount() {
     imageApi.get()
       .then(images => {
         this.setState({
-          error: '',
           images
         });
       })

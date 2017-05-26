@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class GalleryItem extends Component {
+
+  static propTypes = {
+    images: PropTypes.array,
+  };
+
   constructor(props) {
     super(props);
 
