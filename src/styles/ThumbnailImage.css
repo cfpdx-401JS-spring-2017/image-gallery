@@ -1,0 +1,11 @@
+div.thumbnail {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  border: 1px solid #aaa;
+  margin: 5px; }
+  div.thumbnail img {
+    width: 300px;
+    height: 230px;
+    overflow: hidden; }
