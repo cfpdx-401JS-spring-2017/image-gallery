@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import GalleryItem from './GalleryItem';
 
-class Gallery extends Component {
-  constructor(props) {
-    super(props);
+Gallery.propTypes = {
+  images: PropTypes.array,
+};
 
-    this.state = {
-
-    };
-  }
-
-  render() {
-    return (
-      <div>
-      </div>
-    );
-  }
+export default function Gallery(props) {
+  return (
+    <GalleryItem
+      images={props.images}
+    />
+  );
 }
-
-export default Gallery;

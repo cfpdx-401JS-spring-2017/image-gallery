@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import ThumbnailItem from './ThumbnailItem';
 
-class Thumbnail extends Component {
-  constructor(props) {
-    super(props);
+Thumbnail.propTypes = {
+  images: PropTypes.array,
+};
 
-    this.state = {
+export default function Thumbnail(props) {
 
-    };
-  }
-
-  render() {
-    return (
-      <div>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <ThumbnailItem images={props.images}/>
+    </div>
+  );
 }
 
-export default Thumbnail;

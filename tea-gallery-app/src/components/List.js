@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import ListItem from './ListItem';
 
-class List extends Component {
-  constructor(props) {
-    super(props);
+List.propTypes = {
+  images: PropTypes.array,
+};
 
-    this.state = {
+export default function List(props) {
 
-    };
-  }
-
-  render() {
-    return (
-      <div>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <ListItem images={props.images} />
+    </div>
+  );
 }
-
-export default List;
