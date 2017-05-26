@@ -10,10 +10,14 @@ List.propTypes = {
   }))
 };
 
-export default function List({ poms }) {
+export default function List({ poms, handleDelete }) {
   return (
     <ul>
-      {poms.map((pom, i) => <ListImage key={i} {...pom} />)}
+      {poms.map((pom, i) => <ListImage
+        key={pom._id}
+        {...pom}
+        onDelete={() => handleDelete(pom._id, i)}
+      />)}
     </ul>
   );
 }

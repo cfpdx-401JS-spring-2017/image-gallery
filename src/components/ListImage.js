@@ -7,11 +7,12 @@ ListImage.propTypes = {
   url: PropTypes.string.isRequired
 };
 
-export default function ListImage({ name, description, url }) {
+export default function ListImage({ name, description, url, onDelete }) {
   return (
     <div>
       <h3><a href={url}>{name}</a></h3>
       <p>{description}</p>
+      <button onClick={onDelete}>Delete</button>
     </div>
   );
 }
