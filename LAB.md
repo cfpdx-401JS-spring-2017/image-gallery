@@ -1,68 +1,39 @@
-<img src="https://cloud.githubusercontent.com/assets/478864/22186847/68223ce6-e0b1-11e6-8a62-0e3edc96725e.png" width=30> Cute Bunny Display Components
+<img src="https://cloud.githubusercontent.com/assets/478864/22186847/68223ce6-e0b1-11e6-8a62-0e3edc96725e.png" width=30> Cute Bunny Edit List
 ===
 
-For this assignment, build three different components views for a image list (each of which has a list and a image-view component), and a wrapper component that allows the selection of which view to show. 
+For this assignment, your going to expand your Image Gallery app by handling editing of images, 
+and provide a way for users to add a new image and to delete images. 
 
-## Data
+## Add and Delete Images
 
-The image data looks like:
+* Create a component that allows the user to add new images to the list.
+* Add a button to each image display to allow the user to delete the image from the list.
 
-```js
-{ 
-  title: 'Cute Bunny',
-  description: 'Isn\'t it fuzzy-wuzzy cutest thing you\'ve ever seen?',
-  url: 'http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg'
-}
-```
 
-You can use your own URL, or work with these cute bunnies:
+You'll want to add id's to your images. Feel free to use a [npm package](https://www.google.com/search?q=npm+generate+id&rlz=1C5CHFA_enUS702US702&oq=npm+generate+id&aqs=chrome..69i57j69i64.3376j0j7&sourceid=chrome&ie=UTF-8)
 
-* http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg 
-* http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-25__605.jpg
-* http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-110__605.jpg
+Make sure to create a component around adding a new image.
 
-For now, put the data in a module you can import. Simulate an async get by return a promise from a get method:
+Delete button will be in each type of display
 
-```js
-const images = [ /* your image data */ ];
+Handling the adds and deletes should happen in component that owns the data.
 
-export default {
-  get() { return Promise.resolve(images) }
-}
-```
+Don't forget to `.slice()` your data in your API service class when returning on `get()`
 
-## Components
 
-The three image viewer component(s) you should build are:
+## Bonus
 
-1. "list" 
-    1. tabular list - show the list vertically
-    1. list item - display the title of the image, the link (not the  actual image), and description.  
-1. "thumbnail" -  
-    1. float or inline-block list - show "cards" for each image
-    1. each image card shows a "thumbnail" (~ 100x100 pixel scale) and the title (above or below).
-1. "gallery" - 
-    1. display one image at a time, have left and right arrows to advance/go back
-    1. Display the title, description and the full-size image.
+Allow the user to select (up to you how, an edit button, or click on image, etc) an existing image
+and then edit it. You can either add an edit form component, resuse the add component, or offer inline editing.
 
-Then you need a view selector component, and a top-level app component to put everything in
-
-## PropTypes
-
-Include PropTypes for all components (that take props)
+If you use a form, offer the user the option to cancel and don't update the list until the user clicks
+Save or some similar action.
 
 ## Testing
 
-You also need to snapshot test:
-* your individual three image list components
-* your individual three image view components
-* the wrapper component (in each view state)
+Make sure you have snapshot tests for all your components
 
-## Rubric *20pts*
-- "list" component *1pt*
-- "thumbnail" component *1pt*
-- "gallery" component *1pt*
-- view selector component *1pts*
-- App component and general React setup *1pt*
-- Snapshot tests *4pts* (1 per 4 components)
-- Code quality *1pt*
+## Rubric *10pts*
+- Add Image *3pt*
+- Delete Image *3pt*
+- Tests *4pts*
