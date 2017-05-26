@@ -46,7 +46,10 @@ class App extends Component {
         <p>
           Welcome to the <code>Cute Pomeranian Database</code>! Check out our poms by clicking below:
         </p>
-        {this.state.poms && <Wrapper poms={this.state.poms} />}
+        {this.state.poms && <Wrapper
+          poms={this.state.poms}
+          handleDelete={this.handleDelete}
+        />}
         <AddFile poms={this.state.poms} onAdd={this.handleAdd} />
       </div>
     );

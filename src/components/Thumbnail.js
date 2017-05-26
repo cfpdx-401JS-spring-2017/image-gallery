@@ -10,13 +10,13 @@ Thumbnail.propTypes = {
   }))
 };
 
-export default function Thumbnail({ poms }) {
+export default function Thumbnail({ poms, handleDelete }) {
   return (
     <ul>
       {poms.map((pom, i) => <ThumbnailImage
-        key={i}
+        key={pom._id}
         {...pom}
-        onDelete={() => this.handleDelete(pom._id, i)}
+        onDelete={() => handleDelete(pom._id, i)}
       />)}
     </ul>
   );
