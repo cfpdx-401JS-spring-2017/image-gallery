@@ -18,14 +18,14 @@ li {
 
 /*Thumbnail styles*/
 
-.thumbnail-wrapper {
-  display: inline-block;
-  width: 30%;
-}
-
 .thumbnail-list { /*why is there a mysterious padding-left?*/
   max-width: 90%;
   margin: 0 auto;
+}
+
+.thumbnail-wrapper {
+  display: inline-block;
+  width: 30%;
 }
 
 .thumbnail-li {
