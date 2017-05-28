@@ -10,7 +10,10 @@ export default function List(props) {
 
   return (
     <div>
-      <ListItem images={props.images} />
+      <ListItem 
+      images={props.images}
+      onDeleteImage={props.onDeleteImage} 
+      />
     </div>
   );
 }
