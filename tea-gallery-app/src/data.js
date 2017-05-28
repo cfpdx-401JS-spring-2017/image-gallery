@@ -53,6 +53,11 @@ const images = [
 
 export default {
   get() { return Promise.resolve(images.slice()); },
+  AddImage(id) {
+    const index = images.findIndex(img => img._id === id);
+    if (index > -1) images.splice(index, 1);//change this to push?
+    return Promise.resolve(index !== -1);
+  },
   deleteImage(id) {
     const index = images.findIndex(img => img._id === id);
     if (index > -1) images.splice(index, 1);

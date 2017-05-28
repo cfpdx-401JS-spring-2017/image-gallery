@@ -7,6 +7,6 @@ DeleteButton.propTypes = {
 
 export default function DeleteButton(props) {
   return (
-    <button onClick={props.onDeleteImage}>Delete</button >
+    <button onClick={props.onDeleteImage}>Delete</button>
   );
 }

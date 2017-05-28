@@ -11,6 +11,7 @@ class App extends Component {
       images: null,
     };
 
+    this.onAddImage = this.onAddImage.bind(this);
     this.onDeleteImage = this.onDeleteImage.bind(this);
   }
   componentDidMount() {
@@ -33,6 +34,16 @@ class App extends Component {
         const images = this.state.images;
         const index = images.findIndex(img => img._id === id);
         images.splice(index, 1);
+        this.setState({ images });
+      });
+  }
+
+  onAddImage(id) {
+    imageApi.AddImage(id)
+      .then(() => {
+        const images = this.state.images;
+        const index = images.findIndex(img => img._id === id);
+        images.push(index, 1); //is that right?
         this.setState({ images });
       });
   }

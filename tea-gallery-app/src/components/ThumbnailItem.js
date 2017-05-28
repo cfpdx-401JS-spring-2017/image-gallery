@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DeleteButton from './DeleteButton';
+import AddImage from './AddImage';
 
 ThumbnailItem.propTypes = {
   images: PropTypes.array,
@@ -15,6 +16,7 @@ export default function ThumbnailItem(props) {
           <li className="thumbnail-li">
             <img className="thumbnail" src={image.url} alt="../img/broken-glass.jpg"/>
           </li>
+          <AddImage/>
           <DeleteButton 
           images={props.images}
           onDeleteImage={() => props.onDeleteImage(image._id)}
