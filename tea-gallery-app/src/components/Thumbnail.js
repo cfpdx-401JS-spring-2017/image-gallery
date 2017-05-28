@@ -10,7 +10,10 @@ export default function Thumbnail(props) {
 
   return (
     <div>
-      <ThumbnailItem images={props.images}/>
+      <ThumbnailItem 
+      images={props.images}
+      onDeleteImage={props.onDeleteImage}
+      />
     </div>
   );
 }
