@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Gallery from './Gallery';
 import ThumbNail from './ThumbNail';
-import List from './List';
+
 import renderer from 'react-test-renderer';
 
 it('renders without crashing', () => {
@@ -17,7 +17,8 @@ it('renders a snapshot of main App component', () => {
 });
 
 it('renders a snapshot of Gallery component', () => {
-  const bobo = renderer.create(<Gallery />).toJSON();
+  const component = renderer.create(<Gallery />);
+  const bobo = component.toJSON();
   expect(bobo).toMatchSnapshot();
 });
 

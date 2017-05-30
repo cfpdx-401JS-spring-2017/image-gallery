@@ -1,8 +1,11 @@
+.Gallery {
+    
+}
+
 .YoungDivvy {
     height: 100%;
     width: 100vw;
-    background-color: darkgrey;
-    color: white;
+    background-color: #84A98C;
     font-size: 3em;
     position: absolute;
     top: 0;
@@ -11,6 +14,18 @@
     display: flex;
     justify-content: center;
     align-items: center
+}
+
+.mainButtons {
+    text-decoration: none;
+    background-color: #84A98C;
+    color: #2F3E46;
+    border: 5px solid #2F3E46;
+    border-radius: 15px;
+    margin: 2vh 2vh;
+    width: 50vw;
+    height: 20vh;
+    font-size: 3em;
 }
 
 img {

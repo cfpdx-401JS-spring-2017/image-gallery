@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot of main ImageForm component 1`] = `
+<div
+  className="ImageForm"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <label>
+      Title:
+      <input
+        className="InputField"
+        name="title"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <label>
+      Description:
+      <input
+        className="InputField"
+        name="desc"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <label>
+      Url:
+      <input
+        className="InputField"
+        name="url"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <br />
+    <input
+      className="submitButton"
+      type="submit"
+      value="Submit"
+    />
+  </form>
+</div>
+`;

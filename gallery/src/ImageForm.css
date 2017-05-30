@@ -1,0 +1,26 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 50vh;
+    background-color: #2F3E46;
+    border-radius: 15px;
+    color: #CAD2C5;
+}
+
+.submitButton {
+    width: 10vw;
+    margin: 0 auto;
+    background-color: #CAD2C5;
+    border: none;
+    color: #2F3E46;
+}
+
+.InputField {
+    width: 30vw;
+    text-align: left;
+    margin: 3vh 1vh;
+    background-color: #CAD2C5;
+    border: none;
+    height: 5vh;
+}

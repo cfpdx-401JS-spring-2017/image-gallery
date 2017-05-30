@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Gallery.css';
 
 class Gallery extends Component {
@@ -60,20 +61,16 @@ class Gallery extends Component {
       }
     return (
       <div className="Gallery">
-       <button style={{
-           textDecoration: 'none',
-           backgroundColor: 'white',
-           color: 'black',
-           border: 'solid black 5px',
-           margin: '2vh',
-           width: '35vw',
-           height: '8vh',
-           fontSize: '3em'
-       }}   onClick={this.showGallery}>Go To Gallery</button>
+       <p className="mainButtons"  onClick={this.showGallery}>Go To Gallery</p>
        {divvy}
       </div>  
     );
   }
 }
+
+Gallery.protoTypes = {
+    galleryView: PropTypes.bool,
+    index: PropTypes.number
+};
 
 export default Gallery;
