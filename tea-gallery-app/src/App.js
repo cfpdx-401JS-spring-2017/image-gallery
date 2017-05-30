@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Wrapper from './components/Wrapper';
 import imageApi from './data.js';
+import AddImage from './components/AddImage';
 
 class App extends Component {
   constructor() {
@@ -42,8 +43,8 @@ class App extends Component {
   onAddImage(image) {
     imageApi.AddImage(image)
       .then(image => {
-        this.setState({ 
-          images: [...this.state.images, image] 
+        this.setState({
+          images: [...this.state.images, image]
         });
       });
   }
@@ -59,9 +60,9 @@ class App extends Component {
           <Wrapper
             images={this.state.images}
             onDeleteImage={this.onDeleteImage}
-            onAddImage={this.onAddImage}
           />
         }
+        <AddImage onAddImage={this.onAddImage}></AddImage>
       </div >
     );
   }

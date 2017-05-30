@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import GalleryItem from './GalleryItem';
 
-Gallery.propTypes = {
+Gallery.PropTypes = {
   images: PropTypes.array,
+  onDeleteImage: PropTypes.func.required
 };
 
 export default function Gallery(props) {

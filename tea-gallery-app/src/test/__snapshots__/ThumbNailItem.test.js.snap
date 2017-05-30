@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThumbnailItem renders the ThumbnailItem component 1`] = `
+<ul
+  className="thumbnail-list"
+>
+  <div
+    className="thumbnail-wrapper"
+  >
+    <li
+      className="thumbnail-li"
+    >
+      <img
+        alt="../img/broken-glass.jpg"
+        className="thumbnail"
+        src="/../public/img/teainpot.jpg"
+      />
+    </li>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+  <div
+    className="thumbnail-wrapper"
+  >
+    <li
+      className="thumbnail-li"
+    >
+      <img
+        alt="../img/broken-glass.jpg"
+        className="thumbnail"
+        src="/../public/img/tetsubin-charcoal.jpg"
+      />
+    </li>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+  <div
+    className="thumbnail-wrapper"
+  >
+    <li
+      className="thumbnail-li"
+    >
+      <img
+        alt="../img/broken-glass.jpg"
+        className="thumbnail"
+        src="/../public/img/teapot-display.jpg"
+      />
+    </li>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+</ul>
+`;

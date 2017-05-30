@@ -4,8 +4,9 @@ import DeleteButton from './DeleteButton';
 
 class GalleryItem extends Component {
 
-  static propTypes = {
-    images: PropTypes.array,
+  static PropTypes = {
+    images: PropTypes.array.required,
+    onDeleteImage: PropTypes.func.required
   };
 
   constructor(props) {

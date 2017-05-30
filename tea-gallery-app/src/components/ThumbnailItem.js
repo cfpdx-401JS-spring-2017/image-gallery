@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DeleteButton from './DeleteButton';
 
-ThumbnailItem.propTypes = {
-  images: PropTypes.array,
+ThumbnailItem.PropTypes = {
+  images: PropTypes.array.required,
+  onDeleteImage: PropTypes.func.required
 };
 
 export default function ThumbnailItem(props) {
