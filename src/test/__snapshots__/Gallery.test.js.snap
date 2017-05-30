@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery Pulls up default view 1`] = `
+<div>
+  <button
+    className="button gallery-btn"
+    onClick={[Function]}
+  >
+    Previous
+  </button>
+  <div
+    className="gallery"
+  >
+    <img
+      alt="A pom"
+      src="http://cdn2-www.dogtime.com/assets/uploads/gallery/pomeranian-puppies/pomeranian-puppy-1.jpg"
+    />
+    <h2>
+      Daisy
+    </h2>
+    <p>
+      A good pom.
+    </p>
+  </div>
+  <button
+    className="button gallery-btn"
+    onClick={[Function]}
+  >
+    Next
+  </button>
+</div>
+`;

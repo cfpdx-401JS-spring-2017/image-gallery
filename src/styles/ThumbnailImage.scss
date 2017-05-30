@@ -1,0 +1,19 @@
+$width: 300px;
+$height: 300px;
+$title-height: 70px;
+
+div.thumbnail {
+    display: inline-block;
+    height: $height;
+    width: $width; 
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #aaa;
+    margin: 5px;
+
+    img {
+        width: $width;
+        height: $height - $title-height;
+        overflow: hidden;
+    }
+}

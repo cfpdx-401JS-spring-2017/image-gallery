@@ -1,0 +1,12 @@
+div.gallery {
+  display: inline-block;
+  height: 450px;
+  width: 550px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid #aaa;
+  margin: 5px; }
+  div.gallery img {
+    width: 100%;
+    height: 350px;
+    overflow: hidden; }

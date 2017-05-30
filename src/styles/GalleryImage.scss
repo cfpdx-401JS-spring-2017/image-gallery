@@ -1,0 +1,19 @@
+$width: 550px;
+$height: 450px;
+$description-height: 100px;
+
+div.gallery {
+    display: inline-block;
+    height: $height;
+    width: $width; 
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #aaa;
+    margin: 5px;
+
+    img {
+        width: 100%;
+        height: $height - $description-height;
+        overflow: hidden;
+    }
+}
