@@ -13,6 +13,7 @@ class App extends Component {
 
     this.onAddImage = this.onAddImage.bind(this);
     this.onDeleteImage = this.onDeleteImage.bind(this);
+    this.onAddImage = this.onAddImage.bind(this);
   }
   componentDidMount() {
     imageApi.get()
@@ -38,13 +39,12 @@ class App extends Component {
       });
   }
 
-  onAddImage(id) {
-    imageApi.AddImage(id)
-      .then(() => {
-        const images = this.state.images;
-        const index = images.findIndex(img => img._id === id);
-        images.push(index, 1); //is that right?
-        this.setState({ images });
+  onAddImage(image) {
+    imageApi.AddImage(image)
+      .then(image => {
+        this.setState({ 
+          images: [...this.state.images, image] 
+        });
       });
   }
 
@@ -59,6 +59,7 @@ class App extends Component {
           <Wrapper
             images={this.state.images}
             onDeleteImage={this.onDeleteImage}
+            onAddImage={this.onAddImage}
           />
         }
       </div >

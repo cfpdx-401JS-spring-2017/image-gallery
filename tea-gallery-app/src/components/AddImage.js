@@ -15,3 +15,5 @@ export default function AddImage(props) {
     </form>
   );
 }
+
+// https://s-media-cache-ak0.pinimg.com/originals/ce/ee/01/ceee01796583f2be86083bc9d563b806.jpg

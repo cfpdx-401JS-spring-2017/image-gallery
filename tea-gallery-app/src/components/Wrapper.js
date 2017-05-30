@@ -33,6 +33,7 @@ class Wrapper extends Component {
         <View
           images={this.props.images}
           onDeleteImage={this.props.onDeleteImage}
+          onAddImage={this.onAddImage}
         />
       </div >
     );
