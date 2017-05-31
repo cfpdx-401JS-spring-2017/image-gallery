@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ThumbNail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 30vh;
+}
+
+.List {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  height: 8vh;
+  width: 12vw;
+  background-color: #2F3E46;
+  color:#CAD2C5;
+  border: none;
+  margin: 2vh 2vh;
+  box-shadow: none;
+}
