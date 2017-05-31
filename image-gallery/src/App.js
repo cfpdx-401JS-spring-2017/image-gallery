@@ -26,7 +26,7 @@ componentDidMount() {
     console.log(this.state.data);
     return (
       <div className="App">
-          <ListItem images={this.state.data} {ListItem=images.map(image => <li>{image}</li>)}/>
+          <ListItem images={this.state.data}/>
       </div>
     );
   }

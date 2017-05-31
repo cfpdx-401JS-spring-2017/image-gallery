@@ -9,7 +9,13 @@ class ListItem extends Component {
 
    return(
      <div className='ListItem'>
-      <h2>{images.title}</h2>
+       {images.map(image => ( 
+       <ul>
+         <li>{image.title}</li>
+         <li>{image.description}</li>
+         <li>{image.url}</li>
+       </ul>
+      ))}
      </div>
     );
   }
