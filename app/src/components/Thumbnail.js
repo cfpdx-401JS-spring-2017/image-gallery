@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import DeleteButton from './DeleteButton';
 
 class Thumbnail extends Component {
 
@@ -8,18 +9,19 @@ class Thumbnail extends Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, onDelete } = this.props;
 
     return (
       <ul>
         {data.map((img, i) => (
-          <li key={i} className='Thumbnail'>
+          <li key={i} className="Thumbnail">
             <div>
-              <img src={img.url} alt={img.title} className='Thumbnail-image'/>
+              <img src={img.url} alt={img.title} className="Thumbnail-image"/>
             </div>
-            <div className='Thumbnail-title'>
+            <div className="Thumbnail-title">
               {img.title}
             </div>
+            <DeleteButton onClick={() => onDelete(img._id)} />
           </li>
         ))}
       </ul>

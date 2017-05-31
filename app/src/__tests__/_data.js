@@ -16,8 +16,10 @@ const images = [
   }
 ];
 
-export default {
-  get() {
-    return Promise.resolve(images);
-  }
-}
+describe('not a test, just data', () => {
+  it('stops throwing an error', () => {
+    //awesome
+  })
+});
+
+export default images;

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import LoadingSpinner from './LoadingSpinner';
 import List from './List';
 import Thumbnail from './Thumbnail';
 import Gallery from './Gallery';
@@ -16,6 +18,10 @@ class ViewSelector extends Component {
     this.handleGalleryView = this.handleGalleryView.bind(this);
   }
 
+  static propTypes = {
+    data: PropTypes.array.isRequired
+  }
+
   handleListView() {
     this.setState({ CurrentView: List });
   }
@@ -30,20 +36,21 @@ class ViewSelector extends Component {
 
   render() {
 
-    let { data } = this.props;
+    let { data, onDelete } = this.props;
     const { CurrentView } = this.state;
 
-    if (!data) return <div>Loading...</div>
-
+    if (!data) return <LoadingSpinner />
 
     return (
       <div>
-        <div className='button-container'>
+        <div className="button-container">
           <button onClick={this.handleListView}>List</button>
           <button onClick={this.handleThumbnailView}>Thumbnail</button>
           <button onClick={this.handleGalleryView}>Gallery</button>
         </div>
-        <CurrentView data={data} />
+        <CurrentView data={data}
+                     onDelete={onDelete}
+        />
       </div>
     );
   }
