@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './styles/App.css';
 import ListItem from './components/ListItem';
 import images from './data';
@@ -15,10 +14,7 @@ class App extends Component {
   };
 
 componentDidMount() {
-  images.get(images => {
-    console.log('images', images);
-    return images;
-  })
+  images.get()
     .then(images => {
       this.setState({data: images});
     })
@@ -27,16 +23,10 @@ componentDidMount() {
 
 
   render() {
+    console.log(this.state.data);
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-          <ListItem images={this.state.data[0]}/>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <ListItem images={this.state.data} {ListItem=images.map(image => <li>{image}</li>)}/>
       </div>
     );
   }
