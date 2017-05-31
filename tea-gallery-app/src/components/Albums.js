@@ -53,12 +53,11 @@ class Albums extends Component {
   // }
 
   render() {
-    const { match, location } = this.props;
+    const { match } = this.props;
     const { albums } = this.state;
     return (
       <div>
         <div className="albums-view">
-          <p>albums</p>
           {albums.map(album =>
             <button
               key={album.name}

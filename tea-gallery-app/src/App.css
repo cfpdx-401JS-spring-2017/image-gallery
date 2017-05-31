@@ -8,12 +8,40 @@ li {
   list-style-type: none;
 }
 
+/*nav*/
+.nav {
+  text-align: center;
+}
+
+.nav button {
+  width: 12%;
+  margin: 1%;
+  border: 1px solid grey;
+  border-radius: 15px;
+  font-size: .75em;
+}
+
 .wrapper {
   text-align: center;
 }
 
 .app-header {
   text-align: center;
+  font-size: 1.3em;
+}
+
+/*albums styles*/
+.albums-view {
+  text-align: center;
+}
+
+.albums-view button {
+  width: 12%;
+  margin: 10% 5% 0 5%;
+  border: 1px solid grey;
+  border-radius: 15px;
+  font-size: 1em;
+  padding: 5px;
 }
 
 /*Thumbnail styles*/
