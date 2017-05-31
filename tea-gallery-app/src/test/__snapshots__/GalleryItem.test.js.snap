@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Gallery Images pulls up gallery view 1`] = `
+exports[`GalleryItem renders the GalleryItem 1`] = `
 <div
   className="gallery-img-wrapper"
 >

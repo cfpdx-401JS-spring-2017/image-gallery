@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem renders the ListItem component 1`] = `
+<ul>
+  <div
+    className="list-item-wrapper"
+  >
+    <li
+      className="image-list-item"
+    >
+      Title: 
+      tea leaves in teapot
+    </li>
+    <li
+      className="image-list-item"
+    >
+      Description: 
+      what nice leaves
+    </li>
+    <li
+      className="image-list-item"
+    >
+      <a
+        href="/../public/img/teainpot.jpg"
+      >
+        Image
+      </a>
+    </li>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+  <div
+    className="list-item-wrapper"
+  >
+    <li
+      className="image-list-item"
+    >
+      Title: 
+      Tetsubin over charcoal
+    </li>
+    <li
+      className="image-list-item"
+    >
+      Description: 
+      what a nice tetsubin
+    </li>
+    <li
+      className="image-list-item"
+    >
+      <a
+        href="/../public/img/tetsubin-charcoal.jpg"
+      >
+        Image
+      </a>
+    </li>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+  <div
+    className="list-item-wrapper"
+  >
+    <li
+      className="image-list-item"
+    >
+      Title: 
+      Teapot display
+    </li>
+    <li
+      className="image-list-item"
+    >
+      Description: 
+      what a nice teapot display
+    </li>
+    <li
+      className="image-list-item"
+    >
+      <a
+        href="/../public/img/teapot-display.jpg"
+      >
+        Image
+      </a>
+    </li>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+</ul>
+`;

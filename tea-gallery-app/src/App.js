@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Wrapper from './components/Wrapper';
 import imageApi from './data.js';
+import AddImage from './components/AddImage';
 
 class App extends Component {
   constructor() {
@@ -10,6 +11,10 @@ class App extends Component {
     this.state = {
       images: null,
     };
+
+    this.onAddImage = this.onAddImage.bind(this);
+    this.onDeleteImage = this.onDeleteImage.bind(this);
+    this.onAddImage = this.onAddImage.bind(this);
   }
   componentDidMount() {
     imageApi.get()
@@ -25,6 +30,25 @@ class App extends Component {
       });
   }
 
+  onDeleteImage(id) {
+    imageApi.deleteImage(id)
+      .then(() => {
+        const images = this.state.images;
+        const index = images.findIndex(img => img._id === id);
+        images.splice(index, 1);
+        this.setState({ images });
+      });
+  }
+
+  onAddImage(image) {
+    imageApi.AddImage(image)
+      .then(image => {
+        this.setState({
+          images: [...this.state.images, image]
+        });
+      });
+  }
+
   render() {
     return (
       <div className="App" >
@@ -35,8 +59,10 @@ class App extends Component {
         {this.state.images &&
           <Wrapper
             images={this.state.images}
+            onDeleteImage={this.onDeleteImage}
           />
         }
+        <AddImage onAddImage={this.onAddImage}></AddImage>
       </div >
     );
   }
