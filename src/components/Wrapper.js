@@ -1,14 +1,8 @@
 import React, { PureComponent } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect
-} from 'react-router-dom';
-import List from './List';
-import Gallery from './Gallery';
-import Thumbnail from './Thumbnail';
-import Albums from './albums/Album';
+import { BrowserRouter as Router } from 'react-router-dom';
+import List from './views/List';
+import Gallery from './views/Gallery';
+import Thumbnail from './views/Thumbnail';
 
 const views = [List, Gallery, Thumbnail];
 
@@ -26,11 +20,6 @@ export default class Wrapper extends PureComponent {
     return (
       <Router>
       <div>
-        <Switch>
-          <Route exact path='/' component={List} />
-          <Route path='/albums' component={Albums} />
-          <Redirect to='/' />
-        </Switch>
         {views.map(View => (
           <button key={View.name}
             onClick={() => this.setState({ View })}>

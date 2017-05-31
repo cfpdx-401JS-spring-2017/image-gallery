@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import GalleryImage from './GalleryImage';
-import '../styles/Gallery.css';
+import '../../styles/Gallery.css';
 
 export default class Gallery extends Component {
 

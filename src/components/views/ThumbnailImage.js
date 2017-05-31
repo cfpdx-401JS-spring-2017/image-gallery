@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/ThumbnailImage.css';
+import '../../styles/ThumbnailImage.css';
 
 ThumbnailImage.propTypes = {
   name: PropTypes.string.isRequired,
