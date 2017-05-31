@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
+
 import Wrapper from './components/Wrapper';
 import AddFile from './components/AddFile';
 import pomsAPI from './data';
@@ -41,17 +48,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h2>CPDB: Cute Pomeranian Database</h2>
-        <p>
-          Welcome to the <code>Cute Pomeranian Database</code>! Check out our poms by clicking below:
-        </p>
-        {this.state.poms && <Wrapper
-          poms={this.state.poms}
-          handleDelete={this.handleDelete}
-        />}
-        <AddFile poms={this.state.poms} onAdd={this.handleAdd} />
-      </div>
+      <Router>
+        <div className="App">
+          <h2>CPDB: Cute Pomeranian Database</h2>
+          <p>
+            Welcome to the <code>Cute Pomeranian Database</code>! Check out our poms by clicking below:
+          </p>
+          {this.state.poms && 
+          <Route component={Wrapper}
+            poms={this.state.poms}
+            handleDelete={this.handleDelete}
+          />}
+          <Route component={AddFile} poms={this.state.poms} onAdd={this.handleAdd} />
+        </div>
+      </Router>
     );
   }
 }
