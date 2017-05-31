@@ -46,7 +46,10 @@ export default class Gallery extends Component {
         )}>
           Previous
         </button>
-        <GalleryImage poms={poms[index]} />
+        <GalleryImage
+          poms={poms[index]}
+          onDelete={() => this.props.handleDelete(poms[index]._id, index)}
+        />
         <button className="button gallery-btn" onClick={() => (
           this.changePom(+1)
         )}>

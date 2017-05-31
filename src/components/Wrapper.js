@@ -24,7 +24,10 @@ export default class Wrapper extends PureComponent {
             {View.name}
           </button>
         ))}
-        <View poms={this.props.poms} />
+        <View
+          poms={this.props.poms}
+          handleDelete={this.props.handleDelete}
+        />
       </div>
     );
   }
