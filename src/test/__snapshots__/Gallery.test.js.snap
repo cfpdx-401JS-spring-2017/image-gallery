@@ -21,6 +21,11 @@ exports[`Gallery Pulls up default view 1`] = `
     <p>
       A good pom.
     </p>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
   </div>
   <button
     className="button gallery-btn"

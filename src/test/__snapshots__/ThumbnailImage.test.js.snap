@@ -11,5 +11,11 @@ exports[`Thumbnail Image Pulls up default view 1`] = `
   <h2
     className="name"
   />
+  <button
+    className="delete"
+    onClick={undefined}
+  >
+    Delete
+  </button>
 </div>
 `;

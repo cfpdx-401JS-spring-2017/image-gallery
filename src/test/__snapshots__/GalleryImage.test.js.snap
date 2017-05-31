@@ -10,5 +10,10 @@ exports[`Gallery Image Pulls up default view 1`] = `
   />
   <h2 />
   <p />
+  <button
+    onClick={undefined}
+  >
+    Delete
+  </button>
 </div>
 `;

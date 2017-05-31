@@ -29,6 +29,11 @@ exports[`Wrapper Render wrapper 1`] = `
       <p>
         A good pom.
       </p>
+      <button
+        onClick={[Function]}
+      >
+        Delete
+      </button>
     </div>
     <div>
       <h3>
@@ -41,6 +46,11 @@ exports[`Wrapper Render wrapper 1`] = `
       <p>
         A very good pom.
       </p>
+      <button
+        onClick={[Function]}
+      >
+        Delete
+      </button>
     </div>
     <div>
       <h3>
@@ -53,6 +63,11 @@ exports[`Wrapper Render wrapper 1`] = `
       <p>
         The best pom.
       </p>
+      <button
+        onClick={[Function]}
+      >
+        Delete
+      </button>
     </div>
   </ul>
 </div>

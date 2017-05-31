@@ -14,6 +14,12 @@ exports[`Thumbnail Pulls up default view 1`] = `
     >
       Daisy
     </h2>
+    <button
+      className="delete"
+      onClick={[Function]}
+    >
+      Delete
+    </button>
   </div>
   <div
     className="thumbnail"
@@ -27,6 +33,12 @@ exports[`Thumbnail Pulls up default view 1`] = `
     >
       Ginger
     </h2>
+    <button
+      className="delete"
+      onClick={[Function]}
+    >
+      Delete
+    </button>
   </div>
   <div
     className="thumbnail"
@@ -40,6 +52,12 @@ exports[`Thumbnail Pulls up default view 1`] = `
     >
       Tribbles
     </h2>
+    <button
+      className="delete"
+      onClick={[Function]}
+    >
+      Delete
+    </button>
   </div>
 </ul>
 `;
