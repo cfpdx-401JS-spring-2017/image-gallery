@@ -6,6 +6,7 @@ import ThumbNail from './ThumbNail';
 import Gallery from './Gallery';
 import ImageForm from './ImageForm';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -73,6 +74,9 @@ class App extends Component {
 
         <button onClick={() => this.changeView(ImageForm)}>
           Go to Form View
+        </button>
+        <button>
+          <Link to="/albums">Go to Albums</Link>
         </button>
 
         <CurrentView 

@@ -22,7 +22,8 @@ const images = [ {
     description: 'This immaculate waterfall was found deep in the highly dangerous region of Obikenyaoui, a jungle in Brazil',
     url: ImageThree,
     _id: newId()
-    }
+  }
+  
 ]
 
 export default {
