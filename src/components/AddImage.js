@@ -22,11 +22,9 @@ export default class AddImage extends Component {
   }
 
   handleChange(event) {
-    const { name, description, url, value } = event.target;
+    const { name, value } = event.target;
     this.setState({
       [name]: value,
-      [description]: value,
-      [url]: value
     });
   }
 
