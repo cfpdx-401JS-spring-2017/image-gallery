@@ -16,6 +16,7 @@ class ListItem extends Component {
          <li>{image.url}</li>
        </ul>
       ))}
+      <button onClick={() => this.props.ChangeView()}>Go Back</button>
      </div>
     );
   }
