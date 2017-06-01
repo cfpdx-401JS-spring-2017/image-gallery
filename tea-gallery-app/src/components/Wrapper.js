@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Thumbnail from './Thumbnail';
 import List from './List';
@@ -22,12 +23,18 @@ class Wrapper extends Component {
 
   render() {
     const View = this.state.View;
+    const { match } = this.props; 
     return (
       <div className="wrapper">
         {views.map(View =>
           <button
             key={View.name}
-            onClick={() => this.setState({ View })}>
+            onClick={() => {
+              this.props.history.push({
+                search: `view=${View.name}`
+              });
+              this.setState({ View });}
+              }>
             {View.name}
           </button>)}
         <View

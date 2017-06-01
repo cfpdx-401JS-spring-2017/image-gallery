@@ -57,6 +57,7 @@ class AlbumDetail extends Component {
     return (
       <div>
         <Wrapper
+          history={this.props.history}
           onDeleteImage={this.onDeleteImage}
           images={this.state.album.images}
         />
