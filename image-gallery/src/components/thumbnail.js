@@ -6,7 +6,6 @@ class Thumbnail extends Component {
     return(
       <div>
         <h1>HOOOOOOOOO</h1>
-        <button onClick={() => this.props.ChangeView()}>Go Back</button>
       </div>
     );
   }

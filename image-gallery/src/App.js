@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import ListItem from './components/ListItem';
-import Gallery from './components/Gallery';
-import Thumbnail from './components/Thumbnail';
 import images from './data';
+import Wrapper from './components/Wrapper'
 
 
 class App extends Component {
@@ -12,11 +10,7 @@ class App extends Component {
 
     this.state = {
       data: [],
-      CurrentView: ListItem
     };
-
-    this.changeView = this.changeView.bind(this);
-
   };
 
   componentDidMount() {
@@ -26,17 +20,11 @@ class App extends Component {
       })
   }
 
-  changeView(View = ListItem, data) {
-    this.setState({ CurrentView: View, data })
-  };
-
   render() {
-    const { CurrentView } = this.state;
 
     return (
       <div className="App">
-        <ListItem images={this.state.data} />
-        <CurrentView changeView={this.changeView} />
+        <Wrapper data={this.state.data}/>
       </div>
     );
   }

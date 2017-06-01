@@ -10,12 +10,12 @@ class Wrapper extends Component {
     this.state = {
       CurrentView: ListItem
     }
+  this.changeView = this.changeView.bind(this);
   };
 
-  this.changeView = this.changeView.bind(this);
 
-changeView(View = ListItem, data) {
-  this.setState({ CurrentView: View, data })
+changeView(View = ListItem) {
+  this.setState({ CurrentView: View })
 };
 
 render() {
@@ -23,10 +23,14 @@ render() {
 
   return (
     <div>
-      <CurrentView changeView={this.changeView}>
+      <button onClick={() => this.changeView(Thumbnail)}>Go Back</button>
+      <button onClick={() => this.changeView(Gallery)}>Go Back</button>
+      <button onClick={() => this.changeView(ListItem)}>Go Back</button>
+      <CurrentView images={this.props.data}/>
     </div>
-      );
-    }
+  );
 }
+}
+
 export default Wrapper;
 
