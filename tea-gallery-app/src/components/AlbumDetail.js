@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import { Link, Route, Switch, Redirect } from 'react-router-dom';
 // import PropTypes from 'prop-types';
-import Wrapper from './Wrapper';
+// import Wrapper from './Wrapper';
 import AddImage from './AddImage';
 import albumApi from '../data';
+import Thumbnail from './Thumbnail';
+import List from './List';
+import Gallery from './Gallery';
+
+const views = [Thumbnail, List, Gallery];
 
 class AlbumDetail extends Component {
   constructor(props) {
@@ -53,16 +59,28 @@ class AlbumDetail extends Component {
   }
 
   render() {
+    const { match } = this.props;
     if (!this.state.album) return <div>loading...</div>;
     return (
-      <div>
-        <Wrapper
-          history={this.props.history}
-          onDeleteImage={this.onDeleteImage}
-          images={this.state.album.images}
-        />
+      <div className="wrapper">
+        {views.map(View =>
+          <button key={View.name}>
+            <Link to={`${match.url}/${View.name}`}>{View.name}</Link>
+          </button>)
+        }
         <AddImage onAddImage={this.onAddImage} />
-      </div>
+        <Switch>
+          <Route path={`${match.url}/:view`} render={(props) => {
+            const View = views.find(view => view.name === props.match.params.view);
+            return <View
+              onDeleteImage={this.onDeleteImage}
+              images={this.state.album.images}
+            />;
+          }}
+          />
+          <Redirect from={match.url} to={`${match.url}/Thumbnail`} />
+        </Switch>
+      </div >
     );
   }
 }
