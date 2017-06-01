@@ -22,6 +22,7 @@ export default function ListItem(props) {
           />
         </div>
       ))}
+      {props.images.length < 1 && <h2>Album is empty. Add images below</h2>}
     </ul>
   );
 }

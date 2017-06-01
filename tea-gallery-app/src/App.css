@@ -8,6 +8,16 @@ li {
   list-style-type: none;
 }
 
+button {
+  border: 1px solid grey;
+  border-radius: 15px;
+  background-color: hsla(176, 13%, 68%, 0.56);
+}
+
+button:hover {
+  background-color: hsla(176, 61%, 68%, 0.56);
+}
+
 /*nav*/
 .nav {
   text-align: center;
@@ -16,8 +26,6 @@ li {
 .nav button {
   width: 12%;
   margin: 1%;
-  border: 1px solid grey;
-  border-radius: 15px;
   font-size: .75em;
 }
 
@@ -38,8 +46,6 @@ li {
 .albums-view button {
   width: 12%;
   margin: 10% 5% 0 5%;
-  border: 1px solid grey;
-  border-radius: 15px;
   font-size: 1em;
   padding: 5px;
 }

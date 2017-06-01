@@ -15,7 +15,7 @@ export default function App(props) {
       <div className="App" >
         <div className="app-header">
           <h2>Welcome to the Cha'llery</h2>
-          <h3>A photo gallery of <strong>茶</strong></h3>
+          <h3>A photo gallery of <strong>茶</strong> --> 'Tea'</h3>
         </div>
         <div className="nav">
           <button>

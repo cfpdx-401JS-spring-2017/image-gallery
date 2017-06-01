@@ -20,10 +20,8 @@ class Albums extends Component {
     this.state = {
       albums: []
     };
-
-    // this.onAddImage = this.onAddImage.bind(this);
-    // this.onDeleteImage = this.onDeleteImage.bind(this);
   }
+  
   componentDidMount() {
     albumApi.get()
       .then(albums => {
@@ -32,25 +30,6 @@ class Albums extends Component {
         });
       });
   }
-
-  // onDeleteImage(id) {
-  //   albumApi.deleteImage(id)
-  //     .then(() => {
-  //       const images = this.state.images;
-  //       const index = images.findIndex(img => img._id === id);
-  //       images.splice(index, 1);
-  //       this.setState({ images });
-  //     });
-  // }
-
-  // onAddImage(image) {
-  //   albumApi.AddImage(image)
-  //     .then(image => {
-  //       this.setState({
-  //         images: [...this.state.images, image]
-  //       });
-  //     });
-  // }
 
   render() {
     const { match } = this.props;
@@ -61,16 +40,12 @@ class Albums extends Component {
           {albums.map(album =>
             <button
               key={album.name}
-              onClick={() => {
-                console.log(match);
-                this.setState({ album });
-              }
-              }>
-              <Link to="/album/:albumId">{album.name}</Link>
+              onClick={() => this.setState({ album })}
+            >
+              <Link to={`/albums/${album._id}`}>{album.name}</Link>
             </button>)}
         </div>
         <Route path={`${match.url}/:albumId`} component={AlbumDetail}></Route> 
-        {/*how to pass images as props to album detail?*/}
       </div>
     );
   }

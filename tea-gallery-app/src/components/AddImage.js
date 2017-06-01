@@ -11,6 +11,7 @@ class AddImage extends Component {
       description: '',
       url: ''
     };
+    
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -19,7 +20,6 @@ class AddImage extends Component {
     const value = target.value;
     const name = target.name;
     this.setState({ [name]: value });
-    console.log(value, [name], this.state);
   }
 
   render() {

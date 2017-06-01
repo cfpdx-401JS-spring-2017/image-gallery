@@ -1,8 +1,8 @@
 import shortId from 'shortid';
 
-const images = [
+const albums = [
   {
-    _id: 123,
+    _id: '123',
     name: 'Teaware',
     images: [
       {
@@ -26,7 +26,7 @@ const images = [
     ]
   },
   {
-    _id: 456,
+    _id: '456',
     name: 'Tea Plants',
     images: [
       {
@@ -50,7 +50,7 @@ const images = [
     ]
   },
   {
-    _id: 456,
+    _id: '789',
     name: 'Tea Spaces',
     images: [
       {
@@ -70,7 +70,10 @@ const images = [
 ];
 
 export default {
-  get() { return Promise.resolve(images.slice()); },
+  get() { return Promise.resolve(albums.slice()); },
+  getAlbum(id) { 
+    return Promise.resolve(albums.find(album => album._id === id));
+  },
   AddImage(image) {
     const savedImg = {
       ...image,
@@ -79,8 +82,8 @@ export default {
     return Promise.resolve(savedImg);
   },
   deleteImage(id) {
-    const index = images.findIndex(img => img._id === id);
-    if (index > -1) images.splice(index, 1);
+    const index = albums.findIndex(img => img._id === id);
+    if (index > -1) albums.splice(index, 1);
     return Promise.resolve(index !== -1);
   }
 };

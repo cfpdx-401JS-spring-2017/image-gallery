@@ -14,12 +14,13 @@ export default function ThumbnailItem(props) {
       {props.images.map((image, i) => (
         <div key={i} className="thumbnail-wrapper">
           <li className="thumbnail-li">
-            <img className="thumbnail" src={image.url} alt="../img/broken-glass.jpg"/>
+            <img className="thumbnail" src={image.url} alt="tea"/>
           </li>
           <DeleteButton 
           images={props.images}
           onDeleteImage={() => props.onDeleteImage(image._id)}
           />
+        {props.images.length < 1 && <h2>Album is empty. Add images below</h2>}
         </div>
       ))}
     </ul>
