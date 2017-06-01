@@ -26,13 +26,13 @@ const albums = [
     {title: 'Album Two',
         pictures: [
             { 
-            title: 'Cool Waterfall',
+            title: 'Badd Ass Waterfall',
             description: 'This waterfall is located in heart of Africa near the mysterious Triad Canyon',
             url: ImageOne,
             _id: newId()
             },
             { 
-            title: 'Swaggy Creek',
+            title: 'Turned Up Creek',
             description: 'This lonely creek was from my recent adventure to the remote island of Ajobiwana, off the coast of Thailand',
             url: ImageTwo,
             _id: newId()
@@ -43,13 +43,13 @@ const albums = [
     {title: 'Album Three',
         pictures: [
             { 
-            title: 'Cool Waterfall',
+            title: 'Real Mofo Waterfall',
             description: 'This waterfall is located in heart of Africa near the mysterious Triad Canyon',
             url: ImageOne,
             _id: newId()
             },
             { 
-            title: 'Swaggy Creek',
+            title: 'Blacking Out Creek',
             description: 'This lonely creek was from my recent adventure to the remote island of Ajobiwana, off the coast of Thailand',
             url: ImageTwo,
             _id: newId()
@@ -67,6 +67,12 @@ export default {
 
   getAlbums() {
     return Promise.resolve(albums.slice());
+  },
+
+  getAlbumById(id) {
+    return Promise.resolve(albums.find(album => {
+        return album._id.toString() === id;
+    }));
   },
 
   newAlbumToDb(album) {

@@ -9,12 +9,7 @@ class Albums extends Component {
     this.state = {
       albums: [],
     }
-    // this.albumHandler = this.albumHandler.bind(this);
   }
-
-//   albumHandler () {
-//     console.log(album);
-//   }
 
   componentDidMount() {
     albumsData.get()
