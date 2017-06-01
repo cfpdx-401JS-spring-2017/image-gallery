@@ -23,9 +23,9 @@ render() {
 
   return (
     <div>
-      <button onClick={() => this.changeView(Thumbnail)}>Go Back</button>
-      <button onClick={() => this.changeView(Gallery)}>Go Back</button>
-      <button onClick={() => this.changeView(ListItem)}>Go Back</button>
+      <button onClick={() => this.changeView(Thumbnail)}>Thumbnail View</button>
+      <button onClick={() => this.changeView(Gallery)}>Gallery View</button>
+      <button onClick={() => this.changeView(ListItem)}>List View</button>
       <CurrentView images={this.props.data}/>
     </div>
   );
