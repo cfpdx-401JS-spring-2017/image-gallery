@@ -34,7 +34,7 @@ exports[`Wrapper Render wrapper 1`] = `
         className="delete"
         onClick={[Function]}
       >
-        Delete
+        Delete🗑
       </button>
     </div>
     <div
@@ -53,7 +53,7 @@ exports[`Wrapper Render wrapper 1`] = `
         className="delete"
         onClick={[Function]}
       >
-        Delete
+        Delete🗑
       </button>
     </div>
     <div
@@ -72,7 +72,7 @@ exports[`Wrapper Render wrapper 1`] = `
         className="delete"
         onClick={[Function]}
       >
-        Delete
+        Delete🗑
       </button>
     </div>
   </ul>

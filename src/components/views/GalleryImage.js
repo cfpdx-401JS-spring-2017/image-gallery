@@ -12,14 +12,11 @@ GalleryImage.propTypes = {
 
 export default function GalleryImage({ poms, onDelete }) {
   return (
-    <div>
-      {poms.length > 0 &&
-        <div className="gallery">
-          <img src={poms.url} alt={'A pom'} />
-          <h2>{poms.name}</h2>
-          <p>{poms.description}</p>
-          <button onClick={onDelete}>Delete</button>
-        </div>}
+    <div className="gallery">
+      <img src={poms.url} alt={'A pom'} />
+      <h2>{poms.name}</h2>
+      <p>{poms.description}</p>
+      <button onClick={onDelete}>Delete</button>
     </div>
   );
 }

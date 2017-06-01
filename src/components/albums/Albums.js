@@ -55,6 +55,7 @@ export default class Albums extends Component {
     return (
       <main>
         <h2>Albums</h2>
+        <Link to={'/'}>Go Home</Link>
         <div>
           <ul>
             {albums &&

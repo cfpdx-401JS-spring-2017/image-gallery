@@ -2,7 +2,7 @@ import shortid from 'shortid';
 
 const albums = [
   {
-    _id: shortid.generate(),
+    _id: '0',
     name: 'Cute Poms',
     images: [
       {
@@ -25,7 +25,7 @@ const albums = [
       }]
   },
   {
-    _id: shortid.generate(),
+    _id: '1',
     name: 'Adorable Poms',
     images: [
       {
@@ -48,7 +48,7 @@ const albums = [
       }]
   },
   {
-    _id: shortid.generate(),
+    _id: '2',
     name: 'Silly Poms',
     images: [
       {

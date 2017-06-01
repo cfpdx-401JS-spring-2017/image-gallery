@@ -18,7 +18,7 @@ exports[`List Image Pulls up default view 1`] = `
       className="delete"
       onClick={[Function]}
     >
-      Delete
+      Delete🗑
     </button>
   </div>
   <div
@@ -37,7 +37,7 @@ exports[`List Image Pulls up default view 1`] = `
       className="delete"
       onClick={[Function]}
     >
-      Delete
+      Delete🗑
     </button>
   </div>
   <div
@@ -56,7 +56,7 @@ exports[`List Image Pulls up default view 1`] = `
       className="delete"
       onClick={[Function]}
     >
-      Delete
+      Delete🗑
     </button>
   </div>
 </ul>

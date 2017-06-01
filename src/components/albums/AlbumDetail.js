@@ -51,7 +51,10 @@ export default class AlbumDetail extends Component {
       .then(() => {
         const images = this.state.album.images.slice();
         images.splice(index, 1);
-        this.setState({ images });
+        const album = Object.assign({}, this.state.album);
+        album.images = images;
+
+        this.setState({ album });
       });
   }
 
@@ -69,9 +72,9 @@ export default class AlbumDetail extends Component {
         {album &&
           <Wrapper
             history={this.props.history}
-            location={this.props.location}
             key={album._id}
-            poms={album.images} />}
+            poms={album.images}
+            handleDelete={this.handleDelete} />}
         <AddImage poms={this.state.poms} onAdd={this.handleAdd} />
       </div>
     );

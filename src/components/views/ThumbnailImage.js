@@ -14,7 +14,7 @@ export default function ThumbnailImage({ name, description, url, onDelete }) {
       <img src={url} alt={'A pom'} />
       <h2 className="name">{name}</h2>
       <button className="delete" onClick={onDelete}>
-        Delete
+        Delete🗑
       </button>
     </div>
   );

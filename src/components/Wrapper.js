@@ -24,7 +24,7 @@ export default class Wrapper extends PureComponent {
             <button key={View.name}
               onClick={() => {
                 this.props.history.push({
-                  search: `?view=${View.name}`
+                  search: `view=${View.name}`
                 });
                 this.setState({ View });
               }}>
