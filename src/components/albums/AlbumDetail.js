@@ -4,6 +4,7 @@ import {
   Link
 } from 'react-router-dom';
 import Wrapper from '../Wrapper';
+import AddImage from '../AddImage';
 import pomsAPI from '../../data';
 import qs from 'qs';
 
@@ -14,6 +15,9 @@ export default class AlbumDetail extends Component {
     this.state = {
       album: null
     };
+
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   getAlbum(albumId) {
@@ -28,6 +32,27 @@ export default class AlbumDetail extends Component {
 
   componentWillReceiveProps({ match }) {
     this.getAlbum(match.params.albumId);
+  }
+
+  handleAdd(image) {
+    pomsAPI.addPom(image)
+      .then(image => {
+        const updatedAlbum = Object.assign({}, this.state.album);
+        updatedAlbum.images = [...this.state.album.images, image];
+
+        this.setState({
+          album: updatedAlbum
+        });
+      });
+  }
+
+  handleDelete(id, index) {
+    pomsAPI.deletePom(id)
+      .then(() => {
+        const images = this.state.album.images.slice();
+        images.splice(index, 1);
+        this.setState({ images });
+      });
   }
 
   render() {
@@ -47,6 +72,7 @@ export default class AlbumDetail extends Component {
             location={this.props.location}
             key={album._id}
             poms={album.images} />}
+        <AddImage poms={this.state.poms} onAdd={this.handleAdd} />
       </div>
     );
   }

@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 
-export default class AddFile extends Component {
+export default class AddAlbum extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      name: '',
-      description: '',
-      url: ''
+      name: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -15,23 +13,19 @@ export default class AddFile extends Component {
 
   reset() {
     this.setState({
-      name: '',
-      description: '',
-      url: ''
+      name: ''
     });
   }
 
   handleChange(event) {
-    const { name, description, url, value } = event.target;
+    const { name, value } = event.target;
     this.setState({
-      [name]: value,
-      [description]: value,
-      [url]: value
+      [name]: value
     });
   }
 
   render() {
-    const { name, description, url } = this.state;
+    const { name } = this.state;
 
     return (
       <div>
@@ -45,18 +39,6 @@ export default class AddFile extends Component {
             name: <input name="name"
               required
               value={name}
-              onChange={this.handleChange} />
-          </label>
-          <label>
-            url: <input name="url"
-              required
-              value={url}
-              onChange={this.handleChange} />
-          </label>
-          <label>
-            description: <input name="description"
-              required
-              value={description}
               onChange={this.handleChange} />
           </label>
           <button type="submit">Add</button>

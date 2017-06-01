@@ -65,7 +65,7 @@ export default class Albums extends Component {
               />)}
           </ul>
           <Route path={`${match.url}/:albumId`} component={AlbumDetail} />
-          <AddAlbum poms={this.state.poms} onAdd={this.handleAdd} />
+          <AddAlbum poms={this.state.poms} />
         </div>
       </main>
     );
