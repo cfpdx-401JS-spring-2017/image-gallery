@@ -3,7 +3,7 @@ const nextId = () => (id++).toString();
 
 const albums = [
   {
-    _id: 0,
+    _id: '0',
     name: 'Cute Poms',
     images: [
       {
@@ -26,7 +26,7 @@ const albums = [
       }]
   },
   {
-    _id: 1,
+    _id: '1',
     name: 'Adorable Poms',
     images: [
       {
@@ -49,7 +49,7 @@ const albums = [
       }]
   },
   {
-    _id: 2,
+    _id: '2',
     name: 'Silly Poms',
     images: [
       {
@@ -75,6 +75,8 @@ const albums = [
 
 export default {
   get() { return Promise.resolve(albums.slice()); },
+  
+  getAlbum(id) { return Promise.resolve(albums.find(album => album._id === id)); },
 
   addPom(pom) {
     const saved = {

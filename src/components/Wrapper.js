@@ -11,7 +11,7 @@ export default class Wrapper extends PureComponent {
     super(props);
 
     this.state = {
-      View: views[0],
+      View: views[2],
     };
   }
 

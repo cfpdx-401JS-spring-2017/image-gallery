@@ -3,10 +3,10 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect,
-  Link
+  Redirect
 } from 'react-router-dom';
 
+import Home from './components/Home';
 import Albums from './components/albums/Albums';
 import './styles/App.css';
 
@@ -20,13 +20,10 @@ class App extends Component {
             Welcome to the <code>Cute Pomeranian Database</code>! Check out our poms by clicking below:
           </p>
           <Switch>
-            <Route exact path='/' />
+            <Route exact path='/' component={Home}/>
             <Route path='/albums' component={Albums} />
             <Redirect to='/' />
           </Switch>
-          <button>
-            <Link to="/albums">Go to Albums</Link>
-          </button>
         </div>
       </Router>
     );
