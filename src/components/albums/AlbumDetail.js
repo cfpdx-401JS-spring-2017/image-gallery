@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import Wrapper from '../Wrapper';
 import pomsAPI from '../../data';
+import qs from 'qs';
 
 export default class AlbumDetail extends Component {
   constructor(props) {
@@ -31,11 +32,15 @@ export default class AlbumDetail extends Component {
 
   render() {
     const { album } = this.state;
+    const { location } = this.props;
+    const view = qs.parse(location.search.slice(1)).view;
+
     if (!album) return <div>Loading...</div>;
 
     return (
       <div>
         <Link to={album._id}><h3>{album.name}</h3></Link>
+        <h4>{view}</h4>
         {album &&
           <Wrapper
             history={this.props.history}

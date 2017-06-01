@@ -6,7 +6,6 @@ import {
 import AddAlbum from '../AddAlbum';
 import AlbumDetail from './AlbumDetail';
 import pomsAPI from '../../data';
-import qs from 'qs';
 
 function Album({ name, url }) {
   return (
@@ -51,13 +50,11 @@ export default class Albums extends Component {
 
   render() {
     const { albums } = this.state;
-    const { match, location } = this.props;
-    const view = qs.parse(location.search.slice(1)).view;
+    const { match } = this.props;
 
     return (
       <main>
         <h2>Albums</h2>
-        <h3>{view}</h3>
         <div>
           <ul>
             {albums &&
