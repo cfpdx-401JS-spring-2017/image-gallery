@@ -5,7 +5,6 @@ import {
 } from 'react-router-dom';
 import Wrapper from '../Wrapper';
 import pomsAPI from '../../data';
-import qs from 'qs';
 
 export default class AlbumDetail extends Component {
   constructor(props) {
@@ -36,9 +35,11 @@ export default class AlbumDetail extends Component {
 
     return (
       <div>
-        <Link to={album.name}><h3>{album.name}</h3></Link>
+        <Link to={album._id}><h3>{album.name}</h3></Link>
         {album &&
           <Wrapper
+            history={this.props.history}
+            location={this.props.location}
             key={album._id}
             poms={album.images} />}
       </div>

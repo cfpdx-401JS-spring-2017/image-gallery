@@ -35,7 +35,7 @@ export default class AddFile extends Component {
 
     return (
       <div>
-        <h2>Like Poms? Add Your Own!</h2>
+        <h4>Like Poms? Add Your Own Album!</h4>
         <form onSubmit={e => {
           e.preventDefault();
           this.props.onAdd(this.state);

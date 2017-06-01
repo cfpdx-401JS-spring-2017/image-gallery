@@ -19,18 +19,23 @@ export default class Wrapper extends PureComponent {
     const View = this.state.View;
     return (
       <Router>
-      <div>
-        {views.map(View => (
-          <button key={View.name}
-            onClick={() => this.setState({ View })}>
-            {View.name}
-          </button>
-        ))}
-        <View
-          poms={this.props.poms}
-          handleDelete={this.props.handleDelete}
-        />
-      </div>
+        <div>
+          {views.map(View => (
+            <button key={View.name}
+              onClick={() => {
+                this.props.history.push({
+                  search: `?view=${View.name}`
+                });
+                this.setState({ View });
+              }}>
+              {View.name}
+            </button>
+          ))}
+          <View
+            poms={this.props.poms}
+            handleDelete={this.props.handleDelete}
+          />
+        </div>
       </Router>
     );
   }

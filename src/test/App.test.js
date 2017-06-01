@@ -3,9 +3,9 @@ import renderer from 'react-test-renderer';
 import ReactDOM from 'react-dom';
 
 import { Wrapper } from '../components/Wrapper';
-import { List } from '../components/List';
-import { Thumbnail } from '../components/Thumbnail';
-import { Gallery } from '../components/Gallery';
+import { List } from '../components/views/List';
+import { Thumbnail } from '../components/views/Thumbnail';
+import { Gallery } from '../components/views/Gallery';
 import App from '../App';
 
 const views = [List, Gallery, Thumbnail];

@@ -10,7 +10,7 @@ import qs from 'qs';
 
 function Album({ name, url }) {
   return (
-    <li><Link to={url}>{name}</Link></li>
+    <div><Link to={url}>{name}</Link></div>
   );
 }
 
