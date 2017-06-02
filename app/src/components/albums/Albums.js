@@ -26,7 +26,7 @@ export default class Albums extends Component {
   }
 
   componentDidMount() {
-    pomsAPI.get()
+    pomsAPI.getAll()
       .then(albums => this.setState({ albums }));
   }
 

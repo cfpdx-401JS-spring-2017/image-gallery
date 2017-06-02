@@ -6,7 +6,7 @@ export default {
       .then(res => res.json());
   },
 
-  get(id) {
+  getAlbum(id) {
     return fetch(`${API_URL}/${id}`)
       .then(res => res.json());
   },

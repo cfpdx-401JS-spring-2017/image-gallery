@@ -12,7 +12,7 @@ router
   .get('/:id', (req, res, next) => {
     const id = req.params.id;
 
-    Album.find(id)
+    Album.findById(id)
       .then(album => {
         if (!album) return res.status(404).send(`${id} is not a function`);
         else res.send(album);

@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import Wrapper from '../Wrapper';
 import AddImage from '../AddImage';
-import pomsAPI from '../../data';
+import pomsAPI from '../../services/pomsAPI';
 import qs from 'qs';
 
 export default class AlbumDetail extends Component {
@@ -27,6 +27,7 @@ export default class AlbumDetail extends Component {
 
   componentDidMount() {
     const { albumId } = this.props.match.params;
+    console.log('AlbumID', albumId);
     this.getAlbum(albumId);
   }
 
