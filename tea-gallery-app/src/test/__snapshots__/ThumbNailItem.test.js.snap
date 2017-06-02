@@ -11,7 +11,7 @@ exports[`ThumbnailItem renders the ThumbnailItem component 1`] = `
       className="thumbnail-li"
     >
       <img
-        alt="../img/broken-glass.jpg"
+        alt="tea"
         className="thumbnail"
         src="/../public/img/teainpot.jpg"
       />
@@ -29,7 +29,7 @@ exports[`ThumbnailItem renders the ThumbnailItem component 1`] = `
       className="thumbnail-li"
     >
       <img
-        alt="../img/broken-glass.jpg"
+        alt="tea"
         className="thumbnail"
         src="/../public/img/tetsubin-charcoal.jpg"
       />
@@ -47,7 +47,7 @@ exports[`ThumbnailItem renders the ThumbnailItem component 1`] = `
       className="thumbnail-li"
     >
       <img
-        alt="../img/broken-glass.jpg"
+        alt="tea"
         className="thumbnail"
         src="/../public/img/teapot-display.jpg"
       />

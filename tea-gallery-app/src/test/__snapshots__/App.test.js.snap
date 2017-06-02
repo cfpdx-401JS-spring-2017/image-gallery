@@ -1,31 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Gallery Images pulls up gallery view 1`] = `
+exports[`App renders the app 1`] = `
 <div
-  className="gallery-img-wrapper"
+  className="App"
 >
-  <img
-    alt="../img/broken-glass.jpg"
-    className="gallery-img"
-    src="/../public/img/teainpot.jpg"
-  />
-  <button
-    className="back-button"
-    onClick={[Function]}
+  <div
+    className="app-header"
   >
-    Back
-  </button>
-  <button
-    className="next-button"
-    onClick={[Function]}
+    <h2>
+      Welcome to the Cha'llery
+    </h2>
+    <h3>
+      A photo gallery of 
+      <strong>
+        茶
+      </strong>
+       --&gt; 'Tea'
+    </h3>
+  </div>
+  <div
+    className="nav"
   >
-    Next
-  </button>
-   
-  <button
-    onClick={[Function]}
-  >
-    Delete
-  </button>
+    <button>
+      <a
+        href="/albums"
+        onClick={[Function]}
+      >
+        <h3>
+          Albums
+        </h3>
+      </a>
+    </button>
+    <button>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <h3>
+          Home
+        </h3>
+      </a>
+    </button>
+  </div>
 </div>
 `;
