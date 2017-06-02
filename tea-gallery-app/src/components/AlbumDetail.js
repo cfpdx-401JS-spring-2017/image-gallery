@@ -72,10 +72,6 @@ class AlbumDetail extends Component {
             </Link>)
           }
         </div>
-        <DeleteAlbumButton
-          album={this.state.album}
-          onDeleteAlbum={() => this.props.onDeleteAlbum(this.state.album._id)}
-        />
         <Switch>
           <Route path={`${match.url}/:view`}
             render={(props) => {
@@ -88,6 +84,10 @@ class AlbumDetail extends Component {
           />
           <Redirect from={match.url} to={`${match.url}/Thumbnail`} />
         </Switch>
+        <DeleteAlbumButton
+          album={this.state.album}
+          onDeleteAlbum={() => this.props.onDeleteAlbum(this.state.album._id)}
+        />
         <AddImage onAddImage={this.onAddImage} />
       </div >
     );
