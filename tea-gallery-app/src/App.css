@@ -9,6 +9,9 @@ li {
 }
 
 button {
+  height: 30px;
+  width: 70px;
+  margin: 0;
   border: 1px solid grey;
   border-radius: 15px;
   background-color: hsla(176, 13%, 68%, 0.56);
@@ -16,6 +19,7 @@ button {
 
 button:hover {
   background-color: hsla(176, 61%, 68%, 0.56);
+  cursor: pointer;
 }
 
 /*nav*/
@@ -25,6 +29,7 @@ button:hover {
 
 .nav button {
   width: 12%;
+  height: 70px;
   margin: 1%;
   font-size: .75em;
 }
@@ -38,16 +43,29 @@ button:hover {
   font-size: 1.3em;
 }
 
+.app-header h2, h3 {
+  margin: 2%;
+}
+
 /*albums styles*/
 .albums-view {
   text-align: center;
 }
 
 .albums-view button {
-  width: 12%;
-  margin: 10% 5% 0 5%;
+  width: 14%;
+  height: 50px;
+  margin: 2% 5% 0 5%;
   font-size: 1em;
   padding: 5px;
+}
+
+.view-button-wrapper {
+  margin: 2%;
+}
+
+.view-button-wrapper button {
+  margin: 1%;
 }
 
 /*Thumbnail styles*/
@@ -77,9 +95,15 @@ button:hover {
   border: 1px solid grey;
   border-radius: 10px;
   padding: 1%;
-  width: 30%;
-  margin: 2% auto;
+  width: 25%;
+  margin: 2%;
   text-align: left;
+    display: inline-block;
+}
+
+.list-item-wrapper button {
+  margin: 0 auto; 
+  /*doesmt work*/
 }
 
 .image-list-item {

@@ -63,12 +63,13 @@ class AlbumDetail extends Component {
     if (!this.state.album) return <div>loading...</div>;
     return (
       <div className="wrapper">
-        {views.map(View =>
-          <button key={View.name}>
-            <Link to={`${match.url}/${View.name}`}>{View.name}</Link>
-          </button>)
-        }
-        <AddImage onAddImage={this.onAddImage} />
+        <div className="view-button-wrapper">
+          {views.map(View =>
+            <button key={View.name}>
+              <Link to={`${match.url}/${View.name}`}>{View.name}</Link>
+            </button>)
+          }
+        </div>
         <Switch>
           <Route path={`${match.url}/:view`} render={(props) => {
             const View = views.find(view => view.name === props.match.params.view);
@@ -80,6 +81,7 @@ class AlbumDetail extends Component {
           />
           <Redirect from={match.url} to={`${match.url}/Thumbnail`} />
         </Switch>
+        <AddImage onAddImage={this.onAddImage} />
       </div >
     );
   }
