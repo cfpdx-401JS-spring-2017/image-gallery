@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div
+  className="App"
+>
+  <div>
+    <button
+      onClick={[Function]}
+    >
+      Thumbnail View
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Gallery View
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      List View
+    </button>
+    <div>
+       loading... 
+    </div>
+  </div>
+</div>
+`;
