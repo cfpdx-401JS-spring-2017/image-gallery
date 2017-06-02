@@ -1,7 +1,6 @@
 {
   "name": "image-gallery",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "cd gallery && npm i && npm test"
@@ -15,5 +14,9 @@
   "bugs": {
     "url": "https://github.com/kawallis/image-gallery/issues"
   },
-  "homepage": "https://github.com/kawallis/image-gallery#readme"
+  "homepage": "https://github.com/kawallis/image-gallery#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
