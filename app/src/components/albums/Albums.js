@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import AddAlbum from '../AddAlbum';
 import AlbumDetail from './AlbumDetail';
-import pomsAPI from '../../data';
+import pomsAPI from '../../services/pomsAPI';
 
 function Album({ name, url }) {
   return (
