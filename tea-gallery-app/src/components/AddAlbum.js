@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
-class AddImage extends Component {
+class AddAlbum extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: '',
-      description: '',
-      url: ''
+      name: '',
     };
     
     this.handleChange = this.handleChange.bind(this);
@@ -26,19 +24,17 @@ class AddImage extends Component {
     return (
       <form className="add-item" onSubmit={e => {
         e.preventDefault();
-        this.props.onAddImage(this.state);
+        this.props.onAddAlbum(this.state);
       }}>
-        <label>Image name<input name='title' onChange={this.handleChange}></input></label><br/>
-        <label>Description<input name='description' onChange={this.handleChange}></input></label><br/>
-        <label>URL<input name='url' onChange={this.handleChange}></input></label><br/>
+        <label>Add an album<input placeholder='album name' name='name' onChange={this.handleChange}></input></label>
         <button type="submit">Add</button>
       </form>
     );
   }
 }
 
-AddImage.propTypes = {
-  onAddImage: PropTypes.func,
+AddAlbum.propTypes = {
+  onAddAlbum: PropTypes.func.isRequired
 };
 
-export default AddImage;
+export default AddAlbum;

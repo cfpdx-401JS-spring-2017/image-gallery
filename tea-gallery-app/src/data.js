@@ -2,7 +2,7 @@ import shortId from 'shortid';
 
 const albums = [
   {
-    _id: '123',
+    _id: shortId.generate(),
     name: 'Teaware',
     images: [
       {
@@ -26,7 +26,7 @@ const albums = [
     ]
   },
   {
-    _id: '456',
+    _id: shortId.generate(),
     name: 'Tea Plants',
     images: [
       {
@@ -50,7 +50,7 @@ const albums = [
     ]
   },
   {
-    _id: '789',
+    _id: shortId.generate(),
     name: 'Tea Spaces',
     images: [
       {
@@ -83,6 +83,19 @@ export default {
   },
   deleteImage(id) {
     const index = albums.findIndex(img => img._id === id);
+    if (index > -1) albums.splice(index, 1);
+    return Promise.resolve(index !== -1);
+  },
+  AddAlbum(album) {
+    const savedAlbum = {
+      ...album,
+      _id: shortId.generate()
+    };
+    albums.push(savedAlbum);
+    return Promise.resolve(savedAlbum);
+  },
+  deleteAlbum(id) {
+    const index = albums.findIndex(album => album._id === id);
     if (index > -1) albums.splice(index, 1);
     return Promise.resolve(index !== -1);
   }

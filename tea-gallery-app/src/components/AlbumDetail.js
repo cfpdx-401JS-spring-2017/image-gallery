@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch, Redirect } from 'react-router-dom';
 // import PropTypes from 'prop-types';
-// import Wrapper from './Wrapper';
 import AddImage from './AddImage';
 import albumApi from '../data';
 import Thumbnail from './Thumbnail';
 import List from './List';
 import Gallery from './Gallery';
+import { DeleteAlbumButton } from './DeleteButtons';
 
 const views = [Thumbnail, List, Gallery];
 
@@ -47,7 +47,7 @@ class AlbumDetail extends Component {
   }
 
   onAddImage(image) {
-    albumApi.AddImage(image)
+    albumApi.AddImage(image, this.state.album._id)
       .then(image => {
         const updatedAlbum = Object.assign({}, this.state.album, );
         updatedAlbum.images = [...this.state.album.images, image];
@@ -60,24 +60,31 @@ class AlbumDetail extends Component {
 
   render() {
     const { match } = this.props;
-    if (!this.state.album) return <div>loading...</div>;
+    if (!this.state.album) return <br/>;
     return (
       <div className="wrapper">
         <div className="view-button-wrapper">
           {views.map(View =>
-            <button key={View.name}>
-              <Link to={`${match.url}/${View.name}`}>{View.name}</Link>
-            </button>)
+            <Link key={View.name} to={`${match.url}/${View.name}`}>
+              <button key={View.name}>
+                {View.name}
+              </button>
+            </Link>)
           }
         </div>
+        <DeleteAlbumButton
+          album={this.state.album}
+          onDeleteAlbum={() => this.props.onDeleteAlbum(this.state.album._id)}
+        />
         <Switch>
-          <Route path={`${match.url}/:view`} render={(props) => {
-            const View = views.find(view => view.name === props.match.params.view);
-            return <View
-              onDeleteImage={this.onDeleteImage}
-              images={this.state.album.images}
-            />;
-          }}
+          <Route path={`${match.url}/:view`}
+            render={(props) => {
+              const View = views.find(view => view.name === props.match.params.view);
+              return <View
+                onDeleteImage={this.onDeleteImage}
+                images={this.state.album.images}
+              />;
+            }}
           />
           <Redirect from={match.url} to={`${match.url}/Thumbnail`} />
         </Switch>

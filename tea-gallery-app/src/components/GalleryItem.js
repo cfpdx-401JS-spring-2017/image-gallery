@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import DeleteButton from './DeleteButton';
+import { DeleteImageButton } from './DeleteButtons';
 
 class GalleryItem extends Component {
 
@@ -39,7 +39,7 @@ class GalleryItem extends Component {
             <img className="gallery-img" src={images[this.state.index].url} alt="tea"></img>
             <button className="back-button" onClick={() => this.changeImage(-1)}>Back</button>
             <button className="next-button" onClick={() => this.changeImage(+1)}>Next</button>
-            <DeleteButton
+            <DeleteImageButton
               images={images}
               onDeleteImage={() => this.props.onDeleteImage(images[this.state.index]._id)}
             />

@@ -53,11 +53,15 @@ button:hover {
 }
 
 .albums-view button {
-  width: 14%;
-  height: 50px;
+  width: 20%;
+  height: 60px;
   margin: 2% 5% 0 5%;
   font-size: 1em;
   padding: 5px;
+}
+
+.albums-view button h3 {
+  margin: 0;
 }
 
 .view-button-wrapper {
@@ -131,19 +135,20 @@ button:hover {
 
 /*Add and delete styling*/
 
-.add-image {
+.add-item {
   margin: 5% auto;
   font-size: 2em;
-  width: 70%;
+  width: 60%;
+  font-size: 20px;
 }
 
-.add-image input {
+.add-item input {
   height: 30px;
   margin: 0 10px 10px 10px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
-.add-image button {
+.add-item button {
   width: 100px;
   height: 40px;
   border: 1px solid black;
