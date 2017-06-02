@@ -2,7 +2,7 @@
 
 exports[`AddImage renders the AddImage component 1`] = `
 <form
-  className="add-image"
+  className="add-item"
   onSubmit={[Function]}
 >
   <label>
@@ -12,6 +12,7 @@ exports[`AddImage renders the AddImage component 1`] = `
       onChange={[Function]}
     />
   </label>
+  <br />
   <label>
     Description
     <input
@@ -19,6 +20,7 @@ exports[`AddImage renders the AddImage component 1`] = `
       onChange={[Function]}
     />
   </label>
+  <br />
   <label>
     URL
     <input
@@ -26,6 +28,7 @@ exports[`AddImage renders the AddImage component 1`] = `
       onChange={[Function]}
     />
   </label>
+  <br />
   <button
     type="submit"
   >

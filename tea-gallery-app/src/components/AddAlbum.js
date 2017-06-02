@@ -33,7 +33,7 @@ class AddAlbum extends Component {
   }
 }
 
-AddAlbum.propTypes = {
+AddAlbum.PropTypes = {
   onAddAlbum: PropTypes.func.isRequired
 };
 

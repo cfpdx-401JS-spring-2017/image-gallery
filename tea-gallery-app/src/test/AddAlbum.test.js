@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Wrapper from '../components/Wrapper';
+import AddAlbum from '../components/AddAlbum';
 
 const images = [
   {
@@ -20,9 +20,9 @@ const images = [
   }
 ];
 
-describe('Wrapper', () => {
-  it('renders the Wrapper component', () => {
-    const component = renderer.create(<Wrapper images={images}/>);
+describe('AddAlbum', () => {
+  it('renders the AddAlbum component', () => {
+    const component = renderer.create(<AddAlbum images={images}/>);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });

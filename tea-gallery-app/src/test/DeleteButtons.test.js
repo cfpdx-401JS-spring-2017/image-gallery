@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import DeleteButton from '../components/DeleteButton';
+import { DeleteAlbumButton, DeleteImageButton } from '../components/DeleteButtons';
 
 const images = [
   {
@@ -20,9 +20,15 @@ const images = [
   }
 ];
 
-describe('DeleteButton', () => {
-  it('renders the DeleteButton component', () => {
-    const component = renderer.create(<DeleteButton images={images}/>);
+describe('DeleteButtons', () => {
+  it('renders the DeleteAlbumButton component', () => {
+    const component = renderer.create(<DeleteAlbumButton images={images}/>);
+    const json = component.toJSON();
+    expect(json).toMatchSnapshot();
+  });
+
+  it('renders the DeleteImageButton component', () => {
+    const component = renderer.create(<DeleteImageButton images={images}/>);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
   });
