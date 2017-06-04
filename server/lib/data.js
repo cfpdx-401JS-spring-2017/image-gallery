@@ -58,8 +58,14 @@ module.exports = [
   }
 ];
 
-// TO ENTER IN DATA TO YOUR OWN DB: type the following into the noce REPL:
+// TO ENTER IN DATA TO YOUR OWN DB: type the following into the node REPL:
 // node
 // const albums = require('./lib/data')
 // require('fs').writeFileSync('data.json', JSON.stringify(albums))
 // mongoimport --db gallery --collection albums --file data.json --jsonArray
+
+// ADD IDS MANUALLY TO MONGODB IMAGES: Within Robomongo:
+// db.getCollection('albums').update({}, { $set: { images.0._id: ObjectId() } } { multi: true })
+// db.getCollection('albums').update({}, { $set: { images.1._id: ObjectId() } } { multi: true })
+// db.getCollection('albums').update({}, { $set: { images.2._id: ObjectId() } } { multi: true })
+// Do this for as many objects as you have in each album {index 0, 1, ...}

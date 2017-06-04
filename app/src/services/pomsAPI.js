@@ -22,5 +22,22 @@ export default {
         if (!ok) throw json;
         return json;
       })
+  },
+
+  addPom(image) {
+    return fetch(API_URL, {
+      method: 'POST',
+      body: JSON.stringify(image),
+      headers: new Headers({ 'Content Type': 'application/json' })
+    })
+      .then(res => Promise.all([res.ok, res.json()]))
+      .then(([ok, json]) => {
+        if (!ok) throw json;
+        return json;
+      })
+  },
+
+  deletePom(image) {
+    return fetch(API_URL);
   }
 }
