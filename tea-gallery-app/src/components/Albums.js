@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
-import albumApi from '../data';
+import albumApi from '../services/albumApi';
 import AddAlbum from './AddAlbum';
 import AlbumDetail from './AlbumDetail';
 
@@ -20,7 +20,7 @@ class Albums extends Component {
   }
 
   componentDidMount() {
-    albumApi.get()
+    albumApi.getAll()
       .then(albums => {
         this.setState({
           albums
@@ -40,7 +40,7 @@ class Albums extends Component {
 
   onAddAlbum(album) {
     album.images = [];
-    albumApi.AddAlbum(album)
+    albumApi.addAlbum(album)
       .then(album => {
         this.setState({
           albums: [...this.state.albums, album]

@@ -1,0 +1,20 @@
+{
+  "name": "Teaware",
+  "images": [
+    {
+      "title": "tea leaves in teapot",
+      "description": "what nice leaves",
+      "url": "/img/teainpot.jpg"
+    },
+    {
+      "title": "Tetsubin over charcoal",
+      "description": "what a nice tetsubin",
+      "url": "/img/tetsubin-charcoal.jpg"
+    },
+    {
+      "title": "Teapot display",
+      "description": "what a nice teapot display",
+      "url": "/img/teapot-display.jpg"
+    }
+  ]
+}

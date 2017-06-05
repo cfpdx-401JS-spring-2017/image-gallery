@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch, Redirect } from 'react-router-dom';
-// import PropTypes from 'prop-types';
 import AddImage from './AddImage';
-import albumApi from '../data';
+import albumApi from '../services/albumApi';
 import Thumbnail from './Thumbnail';
 import List from './List';
 import Gallery from './Gallery';
@@ -36,11 +35,11 @@ class AlbumDetail extends Component {
     this.getAlbumWrapper(match.params.albumId);
   }
 
-  onDeleteImage(id) {
-    albumApi.deleteImage(id)
+  onDeleteImage(imageId) {
+    albumApi.deleteImage(imageId, this.state.album._id)
       .then(() => {
         const album = this.state.album;
-        const index = album.images.findIndex(img => img._id === id);
+        const index = album.images.findIndex(img => img._id === imageId);
         album.images.splice(index, 1);
         this.setState({ album });
       });
