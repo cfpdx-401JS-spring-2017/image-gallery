@@ -76,7 +76,7 @@ export default class AlbumDetail extends Component {
             key={album._id}
             poms={album.images}
             handleDelete={this.handleDelete} />}
-        <button className="delete" onClick={onDelete}>
+        <button className="delete">
           Delete Album 🗑
         </button>
         <AddImage poms={this.state.poms} onAdd={this.handleAdd} />
