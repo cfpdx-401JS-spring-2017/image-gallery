@@ -9,6 +9,18 @@ router
       .catch(next);
   })
 
+  .get('/:id', (req, res, next) => {
+    const id = req.params.id;
+
+    Album.findById(id)
+      .select('-__v')
+      .then(album => {
+        if(!album) return res.status(404).send(`Error: album with ${id} doesn't exist`);
+        else res.send(album);
+      })
+      .catch(next);
+  })
+
   .post('/', (req, res, next) => {
     Album.create(req.body)
       .then(album => res.send(album))
