@@ -5,9 +5,10 @@ const bodyParser = require('body-parser');
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
+app.use(express.static('./public'));
 
-const teaImages = require('./routes/tea-images');
+const albums = require('./routes/albums.js');
 
-app.use('./teagallery', teaImages);
+app.use('./albums', albums);
 
 module.exports = app;

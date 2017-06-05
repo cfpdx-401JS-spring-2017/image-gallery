@@ -1,5 +1,7 @@
-import app from './lib/app.js';
-import http from 'http';
+/* eslint no-console: "off" */
+const app = require('./lib/app.js');
+const http = require('http');
+require('./lib/connect');
 
 const server = http.createServer(app);
 
