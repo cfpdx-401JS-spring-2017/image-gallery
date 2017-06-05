@@ -5,8 +5,8 @@ import Thumbnail from './Thumbnail';
 import AddImage from './AddImage';
 
 class Wrapper extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       CurrentView: ListItem
@@ -28,7 +28,10 @@ render() {
       <button onClick={() => this.changeView(Thumbnail)}>Thumbnail View</button>
       <button onClick={() => this.changeView(Gallery)}>Gallery View</button>
       <button onClick={() => this.changeView(ListItem)}>List View</button>
-      <CurrentView images={this.props.data}/>
+      <CurrentView 
+        images={this.props.data} 
+        handleSubmit={this.props.handleSubmit}
+      />
     </div>
   );
 }

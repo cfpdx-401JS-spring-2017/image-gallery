@@ -11,7 +11,14 @@ class App extends Component {
     this.state = {
       data: [],
     };
-  };
+
+  this.handleSubmit = this.handleSubmit.bind(this);
+
+};
+
+handleSubmit(newImage) {
+  this.setState({data: [...this.state.data, newImage]})
+}
 
   componentDidMount() {
     images.get()
@@ -24,7 +31,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Wrapper data={this.state.data}/>
+        <Wrapper 
+          data={this.state.data} 
+          handleSubmit={this.handleSubmit}
+        />
       </div>
     );
   }
