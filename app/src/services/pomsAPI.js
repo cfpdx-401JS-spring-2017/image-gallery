@@ -24,9 +24,9 @@ export default {
       })
   },
 
-  addPom(image) {
-    return fetch(API_URL, {
-      method: 'PUT',
+  addPom(image, albumId) {
+    return fetch(`${API_URL}/${albumId}/images`, {
+      method: 'POST',
       body: JSON.stringify(image),
       headers: new Headers({ 'Content-Type': 'application/json' })
     })
@@ -37,7 +37,10 @@ export default {
       })
   },
 
-  deletePom(image) {
-    return fetch(API_URL);
+  deletePom(imageId, albumId) {
+    return fetch(`${API_URL}/${albumId}/images/${imageId}`, {
+      method: 'DELETE',
+      headers: new Headers({ 'Content-Type': 'application/json' })
+    });
   }
 }

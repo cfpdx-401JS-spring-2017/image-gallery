@@ -27,18 +27,20 @@ router
       .catch(next);
   })
 
-  .put('/:id', (req, res, next) => {
+  .post('/:id/images', (req, res, next) => {
     const id = req.params.id;
-    Album.findByIdAndUpdate(id, req.body, { new: true })
-      .then(album => res.send(album))
+    Album.findByIdAndUpdate(id, { $push: { images: req.body } }, { new: true })
+      .then(album => {
+        res.send(album.images[album.images.length - 1]);
+      })
       .catch(next);
   })
 
-  .delete('/:id', (req, res, next) => {
+  .delete('/:id/images/:imageId', (req, res, next) => {
     const id = req.params.id;
-    Album.findByIdAndDelete(id)
-      .then(response => {
-        res.send({ removed: response ? true : false });
+    Album.findByIdAndUpdate(id, { $pull: { images: { _id: req.params.imageId } } })
+      .then(() => {
+        res.send({ removed: true });
       })
       .catch(next);
   });
