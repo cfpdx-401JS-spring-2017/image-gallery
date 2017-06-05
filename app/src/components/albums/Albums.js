@@ -22,7 +22,7 @@ export default class Albums extends Component {
     };
 
     this.handleAdd = this.handleAdd.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
+    this.handleDeleteAlbum = this.handleDeleteAlbum.bind(this);
   }
 
   componentDidMount() {
@@ -39,11 +39,11 @@ export default class Albums extends Component {
       });
   }
 
-  handleDelete(id, index) {
+  handleDeleteAlbum(id) {
     pomsAPI.deleteAlbum(id)
       .then(() => {
         const albums = this.state.albums.slice();
-        albums.splice(index, 1);
+        // albums.splice(index, 1);
         this.setState({ albums });
       });
   }
@@ -63,6 +63,7 @@ export default class Albums extends Component {
                 key={album._id}
                 {...album}
                 url={`${match.url}/${album._id}`}
+                onDelete={() => this.handleDeleteAlbum(album._id, i)}
               />)}
           </ul>
           <Route path={`${match.url}/:albumId`} component={AlbumDetail} />

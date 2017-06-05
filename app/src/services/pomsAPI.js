@@ -37,6 +37,13 @@ export default {
       })
   },
 
+  deleteAlbum(albumId) {
+    return fetch(`${API_URL}/${albumId}`, {
+      method: 'DELETE',
+      headers: new Headers({ 'Content-Type': 'application/json' })
+    });
+  },
+
   deletePom(imageId, albumId) {
     return fetch(`${API_URL}/${albumId}/images/${imageId}`, {
       method: 'DELETE',

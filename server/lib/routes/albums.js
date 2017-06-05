@@ -36,6 +36,15 @@ router
       .catch(next);
   })
 
+  .delete('/:id', (req, res, next) => {
+    const id = req.params.id;
+    Album.findByIdAndDelete(id)
+      .then(() => {
+        res.send({ removed: true });
+      })
+      .catch(next);
+  })
+
   .delete('/:id/images/:imageId', (req, res, next) => {
     const id = req.params.id;
     Album.findByIdAndUpdate(id, { $pull: { images: { _id: req.params.imageId } } })
