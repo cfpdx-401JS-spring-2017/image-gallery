@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ListImage from '../components/Thumbnail';
+import ListImage from '../components/views/Thumbnail';
 
 const poms = [
   {

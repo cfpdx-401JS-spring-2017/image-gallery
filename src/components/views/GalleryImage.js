@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/GalleryImage.css';
+import '../../styles/GalleryImage.css';
 
 GalleryImage.propTypes = {
   poms: PropTypes.shape({

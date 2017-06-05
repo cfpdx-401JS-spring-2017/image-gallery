@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import List from '../components/List';
+import List from '../components/views/List';
 
 const poms = [
   {

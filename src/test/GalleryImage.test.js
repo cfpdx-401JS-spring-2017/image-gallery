@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import GalleryImage from '../components/GalleryImage';
+import GalleryImage from '../components/views/GalleryImage';
 
 const poms = [
   {

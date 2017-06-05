@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class AddFile extends Component {
+export default class AddImage extends Component {
   constructor(props) {
     super(props);
 
@@ -22,11 +22,9 @@ export default class AddFile extends Component {
   }
 
   handleChange(event) {
-    const { name, description, url, value } = event.target;
+    const { name, value } = event.target;
     this.setState({
       [name]: value,
-      [description]: value,
-      [url]: value
     });
   }
 
@@ -35,7 +33,7 @@ export default class AddFile extends Component {
 
     return (
       <div>
-        <h2>Like Poms? Add Your Own!</h2>
+        <h4>Add Your Own Poms!</h4>
         <form onSubmit={e => {
           e.preventDefault();
           this.props.onAdd(this.state);

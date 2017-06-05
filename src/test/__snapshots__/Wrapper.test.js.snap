@@ -18,55 +18,61 @@ exports[`Wrapper Render wrapper 1`] = `
     Thumbnail
   </button>
   <ul>
-    <div>
-      <h3>
-        <a
-          href="http://cdn2-www.dogtime.com/assets/uploads/gallery/pomeranian-puppies/pomeranian-puppy-1.jpg"
-        >
-          Daisy
-        </a>
-      </h3>
-      <p>
-        A good pom.
-      </p>
+    <div
+      className="thumbnail"
+    >
+      <img
+        alt="A pom"
+        src="http://cdn2-www.dogtime.com/assets/uploads/gallery/pomeranian-puppies/pomeranian-puppy-1.jpg"
+      />
+      <h2
+        className="name"
+      >
+        Daisy
+      </h2>
       <button
+        className="delete"
         onClick={[Function]}
       >
-        Delete
+        Delete🗑
       </button>
     </div>
-    <div>
-      <h3>
-        <a
-          href="https://vetstreet.brightspotcdn.com/dims4/default/edb51df/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F19%2F716f20a7f711e0a0d50050568d634f%2Ffile%2FPomeranian-2-645mk062811.jpg"
-        >
-          Ginger
-        </a>
-      </h3>
-      <p>
-        A very good pom.
-      </p>
+    <div
+      className="thumbnail"
+    >
+      <img
+        alt="A pom"
+        src="https://vetstreet.brightspotcdn.com/dims4/default/edb51df/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F19%2F716f20a7f711e0a0d50050568d634f%2Ffile%2FPomeranian-2-645mk062811.jpg"
+      />
+      <h2
+        className="name"
+      >
+        Ginger
+      </h2>
       <button
+        className="delete"
         onClick={[Function]}
       >
-        Delete
+        Delete🗑
       </button>
     </div>
-    <div>
-      <h3>
-        <a
-          href="https://s-media-cache-ak0.pinimg.com/736x/3d/bb/c6/3dbbc606780c996dcd30bd94635c5983.jpg"
-        >
-          Tribbles
-        </a>
-      </h3>
-      <p>
-        The best pom.
-      </p>
+    <div
+      className="thumbnail"
+    >
+      <img
+        alt="A pom"
+        src="https://s-media-cache-ak0.pinimg.com/736x/3d/bb/c6/3dbbc606780c996dcd30bd94635c5983.jpg"
+      />
+      <h2
+        className="name"
+      >
+        Tribbles
+      </h2>
       <button
+        className="delete"
         onClick={[Function]}
       >
-        Delete
+        Delete🗑
       </button>
     </div>
   </ul>

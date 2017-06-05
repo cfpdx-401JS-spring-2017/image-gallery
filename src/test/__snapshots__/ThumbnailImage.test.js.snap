@@ -15,7 +15,7 @@ exports[`Thumbnail Image Pulls up default view 1`] = `
     className="delete"
     onClick={undefined}
   >
-    Delete
+    Delete🗑
   </button>
 </div>
 `;

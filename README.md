@@ -1,2 +1,3 @@
-# Cute Bunny Images
+# Cute Pom Images
 
+A Pomeranian image database
