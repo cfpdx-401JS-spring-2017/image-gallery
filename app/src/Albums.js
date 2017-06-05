@@ -12,14 +12,16 @@ class Albums extends Component {
   }
 
   componentDidMount() {
-    albumsData.get()
-    .then(albums => {
-      this.setState({albums: albums});  
-    });
+    fetch('/api/albums/full')
+    .then(albums => albums.json())
+    .then( albumsData => {
+      this.setState({albums: albumsData});
+    })
   }
 
   render() {
     let {albums} = this.state;
+    console.log(albums);
     return (
       <div className="Albums">
         {albums.map((album,i) => {

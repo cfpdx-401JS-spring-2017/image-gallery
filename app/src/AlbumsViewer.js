@@ -22,7 +22,8 @@ class AlbumsViewer extends Component {
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    albumsData.getAlbumById(id)
+    fetch(`/api/albums/full/${id}`)
+    .then(album => album.json())
       .then(album => {
         this.setState({
           albumName: album.title,
