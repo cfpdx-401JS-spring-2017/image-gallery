@@ -14,7 +14,7 @@ router
 
     Album.findById(id)
       .then(album => {
-        if (!album) return res.status(404).send(`${id} is not a function`);
+        if (!album) return res.status(404).send(`${id} is not an album`);
         else res.send(album);
       })
       .catch(next);
