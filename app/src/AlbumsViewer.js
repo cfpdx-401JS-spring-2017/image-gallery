@@ -34,22 +34,39 @@ class AlbumsViewer extends Component {
 
   addImage(image) {
     const id = this.props.match.params.id;
-    fetch(`/api/pictures/${id}`,
-      {
-        method: 'POST',
-        body: JSON.stringify(image),
-        headers: new Headers({'Content-Type': 'application/json'})
-      })
-      .then(res => {
-        console.log(res);
-      })
+    fetch(`/api/pictures/${id}`, 
+    {
+      method: 'POST',
+      body: JSON.stringify(image),
+      headers: new Headers({'Content-Type': 'application/json'})
+    })
+    .then(() => {
+      fetch(`/api/albums/full/${id}`)
+      .then(album => album.json())
+      .then(album => {
+        this.setState({
+          albumName: album.title,
+          albumId: album._id,
+          images: album.pictures
+        });
+      });
+    });
   }
 
   deleteImage(id) {
+    const albumId = this.props.match.params.id;
     fetch(`/api/pictures/${id}`, 
     {method: 'DELETE'})
-    .then(res => {
-      console.log(res.body);
+    .then(() => {
+      fetch(`/api/albums/full/${albumId}`)
+      .then(album => album.json())
+      .then(album => {
+        this.setState({
+          albumName: album.title,
+          albumId: album._id,
+          images: album.pictures
+        });
+      });
     })
   }
 

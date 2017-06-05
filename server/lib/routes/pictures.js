@@ -28,10 +28,9 @@ router
                 {new: true}                    
                 )
                 .then(album => {
-                    console.log(album);
+                    res.send(picture);
                 })
             })
-            .then(()=> res.send('cool beans'))
             .catch(next);
     })
 

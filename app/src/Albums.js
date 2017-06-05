@@ -9,9 +9,19 @@ class Albums extends Component {
     this.state = {
       albums: [],
     }
+
+    this.refreshState = this.refreshState.bind(this);
   }
 
   componentDidMount() {
+    fetch('/api/albums/full')
+    .then(albums => albums.json())
+    .then( albumsData => {
+      this.setState({albums: albumsData});
+    })
+  }
+
+  refreshState() {
     fetch('/api/albums/full')
     .then(albums => albums.json())
     .then( albumsData => {
@@ -24,7 +34,7 @@ class Albums extends Component {
     return (
       <div className="Albums">
         {albums.map((album,i) => {
-            return <Album key={i} albumData={album} />
+            return <Album key={i} albumData={album} refreshState={this.refreshState}/>
         })}
       </div>  
     );
