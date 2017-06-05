@@ -1,6 +1,7 @@
 const Router = require('express').Router;
 const router = Router();
 const Picture = require('../models/picture');
+const Album = require('../models/album');
 
 router
 
@@ -18,10 +19,19 @@ router
             .catch(next);
     })
 
-    .post('/', (req, res, next) => {
+    .post('/:id', (req, res, next) => {
         new Picture(req.body)
-            .save()
-            .then(picture => res.send(picture))
+            .save() 
+            .then(picture => {
+                Album.findByIdAndUpdate(req.params.id, 
+                { $push: { pictures: picture} },
+                {new: true}                    
+                )
+                .then(album => {
+                    console.log(album);
+                })
+            })
+            .then(()=> res.send('cool beans'))
             .catch(next);
     })
 

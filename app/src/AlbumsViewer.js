@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import albumsData from './data/albumsData.js';
-
 import List from './List';
 import ThumbNail from './ThumbNail';
 import Gallery from './Gallery';
@@ -34,24 +33,24 @@ class AlbumsViewer extends Component {
   }
 
   addImage(image) {
-    albumsData.addPictureToAlbum(image)
-      .then((savedImage) => {
-        let newImages = [
-          ...this.state.images,
-          savedImage
-        ];
-        this.setState({ images: newImages });
-      });
+    const id = this.props.match.params.id;
+    fetch(`/api/pictures/${id}`,
+      {
+        method: 'POST',
+        body: JSON.stringify(image),
+        headers: new Headers({'Content-Type': 'application/json'})
+      })
+      .then(res => {
+        console.log(res);
+      })
   }
 
   deleteImage(id) {
-    albumsData.removePicFromAlbum(id)
-      .then(() => {
-        albumsData.get()
-          .then(images => {
-            this.setState({ images: images });
-          });
-      });
+    fetch(`/api/pictures/${id}`, 
+    {method: 'DELETE'})
+    .then(res => {
+      console.log(res.body);
+    })
   }
 
   render() {
@@ -74,13 +73,13 @@ class AlbumsViewer extends Component {
         </button>
 
         <Route path="/albums/:id/thumbnail"  render={() => (
-          <ThumbNail images={images} />
+          <ThumbNail images={images} deleteImage={this.deleteImage}/>
         )}/>
         <Route path="/albums/:id/gallery"  render={() => (
-          <Gallery images={images} />
+          <Gallery images={images} deleteImage={this.deleteImage}/>
         )}/>
         <Route path="/albums/:id/list"  render={() => (
-          <List images={images} />
+          <List images={images} deleteImage={this.deleteImage} />
         )}/>
         <Route path="/albums/:id/form"  render={() => (
           <ImageForm images={images} addImage={this.addImage}/>

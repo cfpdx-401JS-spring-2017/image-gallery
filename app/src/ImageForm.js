@@ -8,7 +8,7 @@ class ImageForm extends Component {
 
     this.state = {
         title: '',
-        desc: '',
+        description: '',
         url: '',
     }
 
@@ -21,7 +21,7 @@ class ImageForm extends Component {
   }
 
   render() {
-      let {title, desc, url} = this.state;
+      let {title, description, url} = this.state;
     return (
       <div className="ImageForm">
         <form onSubmit={ (e) => {
@@ -42,8 +42,8 @@ class ImageForm extends Component {
                 Description:
                 <input className="InputField" 
                     type="text" 
-                    name="desc" 
-                    value={desc}
+                    name="description" 
+                    value={description}
                     onChange={this.titleHandler}
                 />
             </label>
@@ -69,7 +69,7 @@ class ImageForm extends Component {
 
 ImageForm.propTypes = {
   title: PropTypes.string,
-  desc: PropTypes.string,
+  description: PropTypes.string,
   url: PropTypes.string
 };
 

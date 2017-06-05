@@ -21,7 +21,6 @@ class Albums extends Component {
 
   render() {
     let {albums} = this.state;
-    console.log(albums);
     return (
       <div className="Albums">
         {albums.map((album,i) => {
