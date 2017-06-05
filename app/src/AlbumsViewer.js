@@ -32,6 +32,7 @@ class AlbumsViewer extends Component {
       });
   }
 
+//need to fix array push
   addImage(image) {
     const id = this.props.match.params.id;
     fetch(`/api/pictures/${id}`, 
