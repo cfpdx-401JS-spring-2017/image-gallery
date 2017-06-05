@@ -41,6 +41,7 @@ class Gallery extends Component {
         <h1>{this.props.images[this.state.indexTracker].title}</h1>
         <button onClick={this.decrement}>Back</button>
         <button onClick={this.increment}>Next</button>
+        <button>Delete</button>
       </div>
     );
   }
