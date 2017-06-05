@@ -32,6 +32,15 @@ router
     Album.findByIdAndUpdate(id, req.body, { new: true })
       .then(album => res.send(album))
       .catch(next);
+  })
+
+  .delete('/:id', (req, res, next) => {
+    const id = req.params.id;
+    Album.findByIdAndDelete(id)
+      .then(response => {
+        res.send({ removed: response ? true : false });
+      })
+      .catch(next);
   });
 
 module.exports = router;

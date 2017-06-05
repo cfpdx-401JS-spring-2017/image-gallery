@@ -11,11 +11,11 @@ export default {
       .then(res => res.json());
   },
 
-  add(album) {
+  addAlbum(album) {
     return fetch(API_URL, {
       method: 'POST',
       body: JSON.stringify(album),
-      headers: new Headers({ 'Content Type': 'application/json' })
+      headers: new Headers({ 'Content-Type': 'application/json' })
     })
       .then(res => Promise.all([res.ok, res.json()]))
       .then(([ok, json]) => {
@@ -26,9 +26,9 @@ export default {
 
   addPom(image) {
     return fetch(API_URL, {
-      method: 'POST',
+      method: 'PUT',
       body: JSON.stringify(image),
-      headers: new Headers({ 'Content Type': 'application/json' })
+      headers: new Headers({ 'Content-Type': 'application/json' })
     })
       .then(res => Promise.all([res.ok, res.json()]))
       .then(([ok, json]) => {

@@ -31,7 +31,7 @@ export default class Albums extends Component {
   }
 
   handleAdd(newAlbum) {
-    pomsAPI.addPom(newAlbum)
+    pomsAPI.addAlbum(newAlbum)
       .then(album => {
         this.setState({
           albums: [...this.state.albums, album]
@@ -40,7 +40,7 @@ export default class Albums extends Component {
   }
 
   handleDelete(id, index) {
-    pomsAPI.deletePom(id)
+    pomsAPI.deleteAlbum(id)
       .then(() => {
         const albums = this.state.albums.slice();
         albums.splice(index, 1);
@@ -66,7 +66,7 @@ export default class Albums extends Component {
               />)}
           </ul>
           <Route path={`${match.url}/:albumId`} component={AlbumDetail} />
-          <AddAlbum poms={this.state.poms} />
+          <AddAlbum poms={this.state.poms} handleAdd={this.handleAdd} />
         </div>
       </main>
     );
