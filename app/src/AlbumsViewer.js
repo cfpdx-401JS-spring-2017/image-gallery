@@ -45,8 +45,6 @@ class AlbumsViewer extends Component {
       .then(album => album.json())
       .then(album => {
         this.setState({
-          albumName: album.title,
-          albumId: album._id,
           images: album.pictures
         });
       });
@@ -57,16 +55,13 @@ class AlbumsViewer extends Component {
     const albumId = this.props.match.params.id;
     fetch(`/api/pictures/${id}`, 
     {method: 'DELETE'})
+    .then(res => res.json())
     .then(() => {
-      fetch(`/api/albums/full/${albumId}`)
-      .then(album => album.json())
-      .then(album => {
-        this.setState({
-          albumName: album.title,
-          albumId: album._id,
-          images: album.pictures
-        });
-      });
+      let {images} = this.state;
+      let index = images.indexOf(images.find(image => image._id === id));
+      images.slice();
+      let newImages = images.splice(index, 1);
+      this.setState({images: images});
     })
   }
 
