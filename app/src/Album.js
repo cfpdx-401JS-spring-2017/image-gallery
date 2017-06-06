@@ -15,10 +15,11 @@ class Album extends Component {
   render() {
     let {albumData} = this.props;
     const { match, location } = this.props;
-    
+    console.log(albumData);
     return (
       <div className="Album" >
         <Link className="Link" to={`/albums/${albumData._id}`}><h2>{albumData.title}</h2></Link>
+        <div value={albumData._id} onClick={this.props.deleteAlbum}>delete</div>
       </div>  
     );
   }
