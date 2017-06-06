@@ -43,6 +43,7 @@ class Albums extends Component {
         body: JSON.stringify(newAlbum),
         headers: new Headers({'Content-Type': 'application/json'})
       }) 
+      .then(res => res.json())
       .then(album => {
         let albums = this.state.albums.slice();
         albums.push(album);
@@ -54,15 +55,16 @@ class Albums extends Component {
     }
   }
 
-  deleteAlbum (e) {
-    console.log(e.target.value)
+  deleteAlbum (id) {
     let {albums} = this.state;
-    fetch(`/api/albums/${e.target.value}`,
+    fetch(`/api/albums/${id}`,
     {
       method: 'DELETE'
     })
     .then(() => {
-
+      let index = albums.indexOf(albums.find(album => album._id === id));
+      let newAlbums = albums.splice(index);
+      this.setState({albums: newAlbums});
     });
   }
 
