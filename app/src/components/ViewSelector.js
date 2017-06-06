@@ -5,51 +5,58 @@ import List from './List';
 import Thumbnail from './Thumbnail';
 import Gallery from './Gallery';
 
+const views = { List, Thumbnail, Gallery };
+
 class ViewSelector extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      CurrentView: List
+    this.state = { CurrentView: Gallery };
+
+    this.handleChangeView = this.handleChangeView.bind(this);
+  }
+
+  static propTypes = { data: PropTypes.array.isRequired }
+
+  componentDidMount() {
+    const { history } = this.props;
+
+    if (history.location.search) {
+      let lastView = history.location.search.slice(6);
+      const View = views[lastView];
+      
+      this.setState({ CurrentView: View });
     }
-
-    this.handleListView = this.handleListView.bind(this);
-    this.handleThumbnailView = this.handleThumbnailView.bind(this);
-    this.handleGalleryView = this.handleGalleryView.bind(this);
   }
 
-  static propTypes = {
-    data: PropTypes.array.isRequired
-  }
+  handleChangeView({ target }) {
+    const view = target.textContent;
+    const View = views[view];
+    this.setState({ CurrentView: View });
 
-  handleListView() {
-    this.setState({ CurrentView: List });
-  }
-  
-  handleThumbnailView() {
-    this.setState({ CurrentView: Thumbnail });
-  }
-  
-  handleGalleryView() {
-    this.setState({ CurrentView: Gallery });
+    this.props.history.push({ search: `?view=${view}` });
   }
 
   render() {
-
     let { data, onDelete } = this.props;
     const { CurrentView } = this.state;
 
-    if (!data) return <LoadingSpinner />
+    if (!data) return <LoadingSpinner />;
 
     return (
       <div>
         <div className="button-container">
-          <button onClick={this.handleListView}>List</button>
-          <button onClick={this.handleThumbnailView}>Thumbnail</button>
-          <button onClick={this.handleGalleryView}>Gallery</button>
+          {Object.keys(views).map(view => {
+            return <button 
+                    key={view}
+                    onClick={this.handleChangeView}>
+                      {view}
+                    </button>;
+          })}
         </div>
-        <CurrentView data={data}
-                     onDelete={onDelete}
+        <CurrentView 
+          data={data}
+          onDelete={onDelete}
         />
       </div>
     );

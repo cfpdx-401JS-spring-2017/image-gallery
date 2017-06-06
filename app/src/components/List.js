@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import DeleteButton from './DeleteButton';
 
 class List extends Component {
-
-  static propTypes = {
-    data: PropTypes.array.isRequired
+  static propTypes = { 
+    data: PropTypes.array.isRequired,
+    onDelete: PropTypes.func.isRequired
   }
 
   render() {
@@ -13,7 +13,7 @@ class List extends Component {
 
     return (
       <div>
-        {data.map((img) => (
+        {data.map(img => (
           <ul key={img._id}>
             <li className="list-title">
               {img.title}

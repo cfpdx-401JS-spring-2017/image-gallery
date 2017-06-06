@@ -4,20 +4,18 @@ import DeleteButton from './DeleteButton';
 import OutOfBunnies from './OutOfBunnies';
 
 class Gallery extends Component {
-
   constructor(props) {
     super(props);
     
-    this.state = {
-      index: 0
-    }
+    this.state = { index: 0 };
 
     this.handleGoToPreviousImage = this.handleGoToPreviousImage.bind(this);
     this.handleGoToNextImage = this.handleGoToNextImage.bind(this);
   }
 
-  static propTypes = {
-    data: PropTypes.array.isRequired
+  static propTypes = { 
+    data: PropTypes.array.isRequired,
+    onDelete: PropTypes.func.isRequired
   }
 
   handleGoToPreviousImage() {
@@ -37,9 +35,12 @@ class Gallery extends Component {
   render() {
     let { data, onDelete } = this.props;
 
-    if (!data.length) return <OutOfBunnies />
+    if (!data.length) return <OutOfBunnies />;
 
     let currentImage = data[this.state.index];
+
+    if (!currentImage) return null;
+    
     let { title, description, url, _id } = currentImage;
 
     return (
@@ -51,13 +52,19 @@ class Gallery extends Component {
         <div className="Gallery-view">
           <h2>{title}</h2>
           <p>{description}</p>
-          <img src={url} alt={title} className="Gallery-image" />
+          <img 
+            src={url} 
+            alt={title} 
+            className="Gallery-image" 
+          />
           <br/>
-          <DeleteButton onClick={() => {
-            onDelete(_id);
+          <DeleteButton 
+            onClick={() => {
+              onDelete(_id);
             
-            if (this.state.index === data.length - 1) this.handleGoToPreviousImage();
-          }} />
+              if (this.state.index === data.length - 1) this.handleGoToPreviousImage();
+            }} 
+          />
         </div>
       </div>
     );
