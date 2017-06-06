@@ -20,15 +20,17 @@ router
     })
 
     .post('/:id', (req, res, next) => {
+        let finalPic;
         new Picture(req.body)
             .save() 
             .then(picture => {
+                finalPic = picture;
                 Album.findByIdAndUpdate(req.params.id, 
                 { $push: { pictures: picture} },
                 {new: true}                    
                 )
-                .then(album => {
-                    res.send(picture);
+                .then(() => {
+                    res.send(finalPic);
                 })
             })
             .catch(next);

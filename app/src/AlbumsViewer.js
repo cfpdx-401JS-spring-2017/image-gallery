@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
-import albumsData from './data/albumsData.js';
 import List from './List';
 import ThumbNail from './ThumbNail';
 import Gallery from './Gallery';
@@ -33,6 +32,7 @@ class AlbumsViewer extends Component {
       });
   }
 
+//need to fix array push
   addImage(image) {
     const id = this.props.match.params.id;
     fetch(`/api/pictures/${id}`, 
@@ -41,15 +41,12 @@ class AlbumsViewer extends Component {
       body: JSON.stringify(image),
       headers: new Headers({'Content-Type': 'application/json'})
     })
-    .then(() => {
-      fetch(`/api/albums/full/${id}`)
-      .then(album => album.json())
-      .then(album => {
-        this.setState({
-          albumName: album.title,
-          albumId: album._id,
-          images: album.pictures
-        });
+    .then(res => res.json())
+    .then(picture => {
+      let images = this.state.images.slice();
+      images.push(picture);
+      this.setState({
+          images: images,
       });
     });
   }
@@ -58,16 +55,13 @@ class AlbumsViewer extends Component {
     const albumId = this.props.match.params.id;
     fetch(`/api/pictures/${id}`, 
     {method: 'DELETE'})
+    .then(res => res.json())
     .then(() => {
-      fetch(`/api/albums/full/${albumId}`)
-      .then(album => album.json())
-      .then(album => {
-        this.setState({
-          albumName: album.title,
-          albumId: album._id,
-          images: album.pictures
-        });
-      });
+      let {images} = this.state;
+      let index = images.indexOf(images.find(image => image._id === id));
+      let newImages = images.slice();
+      newImages.splice(index, 1);
+      this.setState({images: newImages});
     })
   }
 
