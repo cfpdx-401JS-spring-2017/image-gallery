@@ -32,7 +32,7 @@ export default class AddAlbum extends Component {
         <h4>Like Poms? Add Your Own Album!</h4>
         <form onSubmit={e => {
           e.preventDefault();
-          this.props.onAdd(this.state);
+          this.props.handleAdd(this.state);
           this.reset();
         }}>
           <label>

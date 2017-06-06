@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {
-  Route,
   Link
 } from 'react-router-dom';
 import Wrapper from '../Wrapper';
 import AddImage from '../AddImage';
-import pomsAPI from '../../data';
+import pomsAPI from '../../services/pomsAPI';
 import qs from 'qs';
 
 export default class AlbumDetail extends Component {
@@ -35,7 +34,7 @@ export default class AlbumDetail extends Component {
   }
 
   handleAdd(image) {
-    pomsAPI.addPom(image)
+    pomsAPI.addPom(image, this.state.album._id)
       .then(image => {
         const updatedAlbum = Object.assign({}, this.state.album);
         updatedAlbum.images = [...this.state.album.images, image];
@@ -47,7 +46,7 @@ export default class AlbumDetail extends Component {
   }
 
   handleDelete(id, index) {
-    pomsAPI.deletePom(id)
+    pomsAPI.deletePom(id, this.state.album._id)
       .then(() => {
         const images = this.state.album.images.slice();
         images.splice(index, 1);

@@ -5,11 +5,16 @@ import {
 } from 'react-router-dom';
 import AddAlbum from '../AddAlbum';
 import AlbumDetail from './AlbumDetail';
-import pomsAPI from '../../data';
+import pomsAPI from '../../services/pomsAPI';
 
-function Album({ name, url }) {
+function Album({ name, url, onDelete }) {
   return (
-    <div><Link to={url}>{name}</Link></div>
+    <div>
+      <Link to={url}>{name}</Link>
+      <button className="delete" onClick={onDelete}>
+        Delete Album 🗑
+      </button>
+    </div>
   );
 }
 
@@ -22,16 +27,16 @@ export default class Albums extends Component {
     };
 
     this.handleAdd = this.handleAdd.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
+    this.handleDeleteAlbum = this.handleDeleteAlbum.bind(this);
   }
 
   componentDidMount() {
-    pomsAPI.get()
+    pomsAPI.getAll()
       .then(albums => this.setState({ albums }));
   }
 
   handleAdd(newAlbum) {
-    pomsAPI.addPom(newAlbum)
+    pomsAPI.addAlbum(newAlbum)
       .then(album => {
         this.setState({
           albums: [...this.state.albums, album]
@@ -39,8 +44,8 @@ export default class Albums extends Component {
       });
   }
 
-  handleDelete(id, index) {
-    pomsAPI.deletePom(id)
+  handleDeleteAlbum(id, index) {
+    pomsAPI.deleteAlbum(id)
       .then(() => {
         const albums = this.state.albums.slice();
         albums.splice(index, 1);
@@ -63,10 +68,11 @@ export default class Albums extends Component {
                 key={album._id}
                 {...album}
                 url={`${match.url}/${album._id}`}
+                onDelete={() => this.handleDeleteAlbum(album._id, i)}
               />)}
           </ul>
           <Route path={`${match.url}/:albumId`} component={AlbumDetail} />
-          <AddAlbum poms={this.state.poms} />
+          <AddAlbum poms={this.state.poms} handleAdd={this.handleAdd} />
         </div>
       </main>
     );
