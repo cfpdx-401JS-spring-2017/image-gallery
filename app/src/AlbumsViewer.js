@@ -40,13 +40,12 @@ class AlbumsViewer extends Component {
       body: JSON.stringify(image),
       headers: new Headers({'Content-Type': 'application/json'})
     })
-    .then(() => {
-      fetch(`/api/albums/full/${id}`)
-      .then(album => album.json())
-      .then(album => {
-        this.setState({
-          images: album.pictures
-        });
+    .then(res => res.json())
+    .then(picture => {
+      let images = this.state.images.slice();
+      images.push(picture);
+      this.setState({
+          images: images,
       });
     });
   }
@@ -59,9 +58,9 @@ class AlbumsViewer extends Component {
     .then(() => {
       let {images} = this.state;
       let index = images.indexOf(images.find(image => image._id === id));
-      images.slice();
-      let newImages = images.splice(index, 1);
-      this.setState({images: images});
+      let newImages = images.slice();
+      newImages.splice(index, 1);
+      this.setState({images: newImages});
     })
   }
 
