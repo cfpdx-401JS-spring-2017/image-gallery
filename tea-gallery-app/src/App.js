@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link
+  Link, 
+  Redirect
 } from 'react-router-dom';
 import './App.css';
 import Albums from './components/Albums';
@@ -31,7 +32,7 @@ export default function App(props) {
         </div>
         <Switch>
           <Route path="/albums" component={Albums} />
-          <Route redirect="/" />;
+          <Redirect to="/"/>;
         </Switch>
       </div >
     </Router>
