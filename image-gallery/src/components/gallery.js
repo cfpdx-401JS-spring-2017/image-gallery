@@ -35,13 +35,20 @@ class Gallery extends Component {
   }
 
   render() {
+    const { images, handleDelete } = this.props; 
+    const indexTracker = this.state.indexTracker;
+    const image = images[indexTracker];
+
     return (
       <div>
         <img src={this.props.images[this.state.indexTracker].url} alt={'Riot Grrrl'} />
         <h1>{this.props.images[this.state.indexTracker].title}</h1>
         <button onClick={this.decrement}>Back</button>
         <button onClick={this.increment}>Next</button>
-        <button>Delete</button>
+        <button onClick={() => {
+          handleDelete(image._id)}
+        }>Delete
+        </button>
       </div>
     );
   }

@@ -31,6 +31,7 @@ render() {
       <CurrentView 
         images={this.props.data} 
         handleSubmit={this.props.handleSubmit}
+        handleDelete={this.props.handleDelete}
       />
     </div>
   );

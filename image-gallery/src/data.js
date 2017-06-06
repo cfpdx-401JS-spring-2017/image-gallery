@@ -26,5 +26,11 @@ const images = [
 
 
 export default {
-  get() { return Promise.resolve(images) }
+  get() { return Promise.resolve(images) },
+
+  delete(id) {
+  const index = images.findIndex(image => image._id === id)
+    if (index > -1) images.splice(index, 1);
+    return Promise.resolve(index !== -1);
+  }
 }

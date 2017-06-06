@@ -12,12 +12,18 @@ class App extends Component {
       data: [],
     };
 
-  this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
 
-};
+  };
 
-handleSubmit(newImage) {
-  this.setState({data: [...this.state.data, newImage]})
+  handleSubmit(newImage) {
+    this.setState({ data: [...this.state.data, newImage] })
+  }
+
+  handleDelete(id) {
+   images.delete(id)
+    .then(() => this.forceUpdate())
 }
 
   componentDidMount() {
@@ -31,9 +37,10 @@ handleSubmit(newImage) {
 
     return (
       <div className="App">
-        <Wrapper 
-          data={this.state.data} 
+        <Wrapper
+          data={this.state.data}
           handleSubmit={this.handleSubmit}
+          handleDelete={this.handleDelete}
         />
       </div>
     );
