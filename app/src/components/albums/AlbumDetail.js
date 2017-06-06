@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  Route,
   Link
 } from 'react-router-dom';
 import Wrapper from '../Wrapper';
@@ -27,7 +26,6 @@ export default class AlbumDetail extends Component {
 
   componentDidMount() {
     const { albumId } = this.props.match.params;
-    console.log('AlbumID', albumId);
     this.getAlbum(albumId);
   }
 

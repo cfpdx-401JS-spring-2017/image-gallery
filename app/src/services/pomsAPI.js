@@ -50,4 +50,4 @@ export default {
       headers: new Headers({ 'Content-Type': 'application/json' })
     });
   }
-}
+};
