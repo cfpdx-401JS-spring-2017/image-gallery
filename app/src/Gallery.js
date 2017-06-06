@@ -21,8 +21,9 @@ class Gallery extends Component {
   }
 
   scrollNext(){
+      let {images} = this.props;
       let { index } = this.state;
-      if (index === 2) {
+      if (index === images.length) {
           this.setState({ index: 0 });
       } else {
           index += 1;
@@ -45,7 +46,7 @@ class Gallery extends Component {
       let {images} = this.props;
       let divvy = null;
 
-      if (galleryView) {
+      if (galleryView && images.length > 0) {
          divvy = <div className="YoungDivvy" >
             <p className="exitButton" onClick={this.showGallery}>exit</p>
             <p className="arrows" onClick={this.scrollLast}> {"<"} </p>
