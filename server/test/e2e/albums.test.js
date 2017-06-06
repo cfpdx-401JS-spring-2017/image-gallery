@@ -28,13 +28,13 @@ describe('/albums API', () => {
       ]
     };
 
-  it('initial GET returns empty array', () => {
+  it('initial GET returns empty object', () => {
     return request.get('/')
-      .then(res => assert.deepEqual(res.body, []));
+      .then(res => assert.deepEqual(res.body, {}));
   });
 
   it('saves albums', () => {
-    return request.post('/')
+    return request.post('/albums')
       .send(testAlbum)
       .then(res => res.body)
       .then(saved => {
@@ -44,53 +44,8 @@ describe('/albums API', () => {
   });
 
   it('deletes an album', () => {
-    return request.delete('/albums')
-      .send({
-        id: testAlbum._id
-      })
+    return request.delete(`/albums/${testAlbum._id}`)
       .then(res => res.body)
       .then(deleted => assert.isTrue(deleted.removed));
   });
 });
-
-// describe.skip('/images API', () => {
-
-//   before(db.drop);
-
-//   let testimage = {
-//     title: 'tea leaves in teapot',
-//     description: 'what nice leaves',
-//     url: '/img/teainpot.jpg',
-//   };
-
-//   before(() => {
-//     return request.post('/ingredients')
-//       .send(testIngredients)
-//       .then(res => res.body)
-//       .then(saved => testIngredients = saved);
-//   });
-
-//   it('initial GET returns empty array', () => {
-//     return request.get('/images')
-//       .then(res => assert.deepEqual(res.body, []));
-//   });
-
-//   it('saves images', () => {
-//     return request.post('/images')
-//       .send(testImage)
-//       .then(res => res.body)
-//       .then(saved => {
-//         assert.ok(saved._id);
-//         testImage = saved;
-//       });
-//   });
-
-//   it.skip('deletes an image', () => {
-//     return request.delete('/images') //this should be albumid/something
-//       .send({
-//         id: testImage._id
-//       })
-//       .then(res => res.body)
-//       .then(deleted => assert.isTrue(deleted.removed));
-//   });
-// });

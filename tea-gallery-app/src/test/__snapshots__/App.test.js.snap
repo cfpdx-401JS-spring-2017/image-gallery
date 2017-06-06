@@ -21,26 +21,26 @@ exports[`App renders the app 1`] = `
   <div
     className="nav"
   >
-    <button>
-      <a
-        href="/albums"
-        onClick={[Function]}
-      >
+    <a
+      href="/albums"
+      onClick={[Function]}
+    >
+      <button>
         <h3>
           Albums
         </h3>
-      </a>
-    </button>
-    <button>
-      <a
-        href="/"
-        onClick={[Function]}
-      >
+      </button>
+    </a>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <button>
         <h3>
           Home
         </h3>
-      </a>
-    </button>
+      </button>
+    </a>
   </div>
 </div>
 `;
