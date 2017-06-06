@@ -28,7 +28,7 @@ router
                 {new: true}                    
                 )
                 .then(album => {
-                    res.send(picture);
+                    res.send(album);
                 })
             })
             .catch(next);

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
-import albumsData from './data/albumsData.js';
 import List from './List';
 import ThumbNail from './ThumbNail';
 import Gallery from './Gallery';
