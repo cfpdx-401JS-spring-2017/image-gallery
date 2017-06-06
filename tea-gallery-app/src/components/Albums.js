@@ -31,9 +31,10 @@ class Albums extends Component {
   onDeleteAlbum(id) {
     albumApi.deleteAlbum(id)
       .then(() => {
-        const albums = this.state.albums;
+        const albums = this.state.albums.slice();
         const index = albums.findIndex(album => album._id === id);
         albums.splice(index, 1);
+        this.props.history.push('/albums');
         this.setState({ albums });
       });
   }

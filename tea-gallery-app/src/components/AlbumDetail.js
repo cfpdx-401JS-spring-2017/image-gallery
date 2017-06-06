@@ -38,17 +38,20 @@ class AlbumDetail extends Component {
   onDeleteImage(imageId) {
     albumApi.deleteImage(imageId, this.state.album._id)
       .then(() => {
-        const album = this.state.album;
-        const index = album.images.findIndex(img => img._id === imageId);
-        album.images.splice(index, 1);
-        this.setState({ album });
+        const images = this.state.album.images.slice();
+        const index = images.findIndex(img => img._id === imageId);
+        images.splice(index, 1);
+         
+        const updatedAlbum = Object.assign({}, this.state.album );
+        updatedAlbum.images = [...images];
+        this.setState({ album: updatedAlbum });
       });
   }
 
   onAddImage(image) {
-    albumApi.AddImage(image, this.state.album._id)
+    albumApi.addImage(image, this.state.album._id)
       .then(image => {
-        const updatedAlbum = Object.assign({}, this.state.album, );
+        const updatedAlbum = Object.assign({}, this.state.album );
         updatedAlbum.images = [...this.state.album.images, image];
 
         this.setState({

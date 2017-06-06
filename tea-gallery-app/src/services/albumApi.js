@@ -26,7 +26,6 @@ export default {
   deleteAlbum(albumId) {
     return fetch(`${API_URL}/${albumId}`, {
       method: 'DELETE',
-      body: JSON.stringify(albumId),
       headers: new Headers({
         'Content-Type': 'application/json'
       })
@@ -54,7 +53,6 @@ export default {
   deleteImage(imageId, albumId) {
     return fetch(`${API_URL}/${albumId}/images/${imageId}`, {
       method: 'DELETE',
-      body: JSON.stringify(imageId),
       headers: new Headers({
         'Content-Type': 'application/json'
       })

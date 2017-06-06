@@ -15,7 +15,7 @@ router
     Album.findById(id)
       .select('-__v')
       .then(album => {
-        if(!album) return res.status(404).send(`Error: album with ${id} doesn't exist`);
+        if (!album) return res.status(404).send(`Error: album with ${id} doesn't exist`);
         else res.send(album);
       })
       .catch(next);
@@ -30,19 +30,25 @@ router
   .post('/:id/images', (req, res, next) => {
     const id = req.params.id;
     Album.findByIdAndUpdate(id, { $push: { images: req.body } }, { new: true })
-      .then(album => res.send(album.images[albums.images.length -1]))
+      .then(album => res.send(album.images[album.images.length - 1]))
       .catch(next);
   })
 
   .delete('/:id', (req, res, next) => {
-    Album.findByIdAndRemove(req.body.id)
+    Album.findByIdAndRemove(req.params.id)
       .then(response => res.send({ removed: !!response }))
       .catch(next);
   })
 
-  .delete('/:id/images/:id', (req, res, next) => {
-    Album.findByIdAndRemove(req.body.id)
-      .then(response => res.send({ removed: !!response }))
+  .delete('/:id/images/:imageId', (req, res, next) => {
+    Album.findByIdAndUpdate(req.params.id,
+      {
+        $pull:
+        {
+          images: { _id: req.params.imageId }
+        }
+      })
+      .then(response => res.send({ removed: !!response[1] }))
       .catch(next);
   });
 

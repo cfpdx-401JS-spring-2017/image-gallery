@@ -18,12 +18,16 @@ export default function App(props) {
           <h3>A photo gallery of <strong>茶</strong> --> 'Tea'</h3>
         </div>
         <div className="nav">
-          <button>
-            <Link to="/albums"><h3>Albums</h3></Link>
-          </button>
-          <button>
-            <Link to="/"><h3>Home</h3></Link>
-          </button>
+          <Link to="/albums">
+            <button>
+              <h3>Albums</h3>
+            </button>
+          </Link>
+          <Link to="/">
+            <button>
+              <h3>Home</h3>
+            </button>
+          </Link>
         </div>
         <Switch>
           <Route path="/albums" component={Albums} />
