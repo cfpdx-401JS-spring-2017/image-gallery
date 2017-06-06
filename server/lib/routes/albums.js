@@ -38,7 +38,7 @@ router
 
   .delete('/:id', (req, res, next) => {
     const id = req.params.id;
-    Album.findByIdAndDelete(id)
+    Album.findByIdAndRemove(id)
       .then(() => {
         res.send({ removed: true });
       })

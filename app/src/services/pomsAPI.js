@@ -21,7 +21,7 @@ export default {
       .then(([ok, json]) => {
         if (!ok) throw json;
         return json;
-      })
+      });
   },
 
   addPom(image, albumId) {
@@ -34,7 +34,7 @@ export default {
       .then(([ok, json]) => {
         if (!ok) throw json;
         return json;
-      })
+      });
   },
 
   deleteAlbum(albumId) {

@@ -7,9 +7,14 @@ import AddAlbum from '../AddAlbum';
 import AlbumDetail from './AlbumDetail';
 import pomsAPI from '../../services/pomsAPI';
 
-function Album({ name, url }) {
+function Album({ name, url, onDelete }) {
   return (
-    <div><Link to={url}>{name}</Link></div>
+    <div>
+      <Link to={url}>{name}</Link>
+      <button className="delete" onClick={onDelete}>
+        Delete Album 🗑
+      </button>
+    </div>
   );
 }
 
@@ -39,11 +44,11 @@ export default class Albums extends Component {
       });
   }
 
-  handleDeleteAlbum(id) {
+  handleDeleteAlbum(id, index) {
     pomsAPI.deleteAlbum(id)
       .then(() => {
         const albums = this.state.albums.slice();
-        // albums.splice(index, 1);
+        albums.splice(index, 1);
         this.setState({ albums });
       });
   }
