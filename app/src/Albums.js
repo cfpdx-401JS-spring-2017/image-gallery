@@ -63,8 +63,9 @@ class Albums extends Component {
     })
     .then(() => {
       let index = albums.indexOf(albums.find(album => album._id === id));
-      let newAlbums = albums.splice(index);
-      this.setState({albums: newAlbums});
+      let albums = albums.slice();
+      let newAlbums = albums.splice(index, 1);
+      this.setState({albums: albums});
     });
   }
 
