@@ -30,7 +30,7 @@ class Albums extends Component {
   }
 
   addAlbum(e) {
-    if(e.charCode==13){
+    if(e.charCode===13){
 
       let newAlbum = {
         title: this.state.titleNew,

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import List from './List';
 import ThumbNail from './ThumbNail';
 import Gallery from './Gallery';
@@ -31,7 +31,6 @@ class AlbumsViewer extends Component {
       });
   }
 
-//need to fix array push
   addImage(image) {
     const id = this.props.match.params.id;
     fetch(`/api/pictures/${id}`, 
@@ -51,7 +50,6 @@ class AlbumsViewer extends Component {
   }
 
   deleteImage(id) {
-    const albumId = this.props.match.params.id;
     fetch(`/api/pictures/${id}`, 
     {method: 'DELETE'})
     .then(res => res.json())
@@ -65,7 +63,7 @@ class AlbumsViewer extends Component {
   }
 
   render() {
-    const {albumName, albumId, images} = this.state;
+    const { albumId, images} = this.state;
 
     return (
       <div className="AlbumsViewer" >
