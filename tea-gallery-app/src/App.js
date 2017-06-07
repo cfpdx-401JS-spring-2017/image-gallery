@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   render() {
-    return (
+    return ( 
       <div className="App" >
         <div className="app-header">
           <h2>Welcome to the Cha'llery</h2>
