@@ -7,6 +7,6 @@ describe('App', () => {
     const component = renderer.create(<App/>);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
-  });
+  }); //test
 
 });
