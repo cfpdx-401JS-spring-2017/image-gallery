@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders the app 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="app-header"
+  >
+    <h2>
+      Welcome to the Cha'llery
+    </h2>
+    <h3>
+      A photo gallery of 
+      <strong>
+        茶
+      </strong>
+    </h3>
+  </div>
+  <form
+    className="add-image"
+    onSubmit={[Function]}
+  >
+    <label>
+      Image name
+      <input
+        name="title"
+        onChange={[Function]}
+      />
+    </label>
+    <label>
+      Description
+      <input
+        name="description"
+        onChange={[Function]}
+      />
+    </label>
+    <label>
+      URL
+      <input
+        name="url"
+        onChange={[Function]}
+      />
+    </label>
+    <button
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+</div>
+`;
