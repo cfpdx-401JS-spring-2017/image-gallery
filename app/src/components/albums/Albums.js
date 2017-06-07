@@ -12,7 +12,7 @@ function Album({ name, url, onDelete }) {
     <div>
       <Link to={url}>{name}</Link>
       <button className="delete" onClick={onDelete}>
-        Delete Album 🗑
+        🗑
       </button>
     </div>
   );
