@@ -25,6 +25,6 @@ describe('AddImage', () => {
     const component = renderer.create(<AddImage images={images}/>);
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
-  });
+  }); //test
 
 });
