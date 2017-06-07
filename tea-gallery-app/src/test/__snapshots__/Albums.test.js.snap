@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Albums renders the Albums view 1`] = `
+<div>
+  <div
+    className="albums-view"
+  >
+    <h3>
+      Albums
+    </h3>
+    <form
+      className="add-item"
+      onSubmit={[Function]}
+    >
+      <label>
+        Add an album
+        <input
+          name="name"
+          onChange={[Function]}
+          placeholder="album name"
+        />
+      </label>
+      <button
+        type="submit"
+      >
+        Add
+      </button>
+    </form>
+  </div>
+</div>
+`;

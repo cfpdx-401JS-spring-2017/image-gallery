@@ -42,12 +42,7 @@ router
 
   .delete('/:id/images/:imageId', (req, res, next) => {
     Album.findByIdAndUpdate(req.params.id,
-      {
-        $pull:
-        {
-          images: { _id: req.params.imageId }
-        }
-      })
+      {$pull: { images: { _id: req.params.imageId } }})
       .then(response => res.send({ removed: !!response[1] }))
       .catch(next);
   });
