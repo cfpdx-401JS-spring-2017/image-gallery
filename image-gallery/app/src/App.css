@@ -1,0 +1,142 @@
+*.Link{
+text-decoration: none;
+color: black;
+
+}
+.App {
+  text-align: center;
+}
+
+
+.App-intro {
+  font-size: large;
+}
+
+
+ .header-container {
+  text-align: center;
+  font-family: 'Plaster', cursive;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.Link:hover, .Link:active, .header-title:hover {
+  cursor: pointer;
+  color: rgb(255, 82, 82);
+
+}
+
+.intro-image, .brighten img {
+  max-width: 50%;
+  border-radius: 15px;
+-webkit-filter: brightness(110%);
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
+margin-left: auto;
+margin-right: auto;
+display: block
+/*position: absolute;*/
+
+
+}
+
+.brighten img:hover{
+-webkit-filter: brightness(175%);
+
+}
+
+span.play-video {
+    display: none;
+    position: relative;
+    font-family: 'Plaster', cursive;
+    text-align: center;
+   
+}
+
+span.play-video:hover, p.video:hover + span {
+    display: block;
+}
+
+
+
+.view-buttons {
+  margin: 15px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  color: grey;
+  font-weight: bolder;
+  border: 1px solid rgb(255, 82, 82);
+  transition-duration: 0.4s;
+  font-family: 'Raleway', sans-serif;
+  background-color: white;
+
+}
+
+.view-buttons:hover {
+  background-color: rgb(255, 82, 82);
+  color: white;
+  cursor: pointer;
+}
+
+.images{
+   max-width: 40%;
+}
+
+.list-view{
+  list-style: none;
+
+}
+
+/*.bottom-list-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  border-bottom: 2px, solid, black;
+}*/
+
+.image-caption{
+ font-family: 'Raleway', sans-serif;
+ font-size: 15px;
+}
+
+.add-image {
+ font-family: 'Raleway', sans-serif;
+ font-size: 15px;
+}
+
+
+.arrow:hover {
+ color: rgb(255, 82, 82);
+}
+
+.thumbnail-image:hover {
+  cursor: pointer;
+  transform: scale(1.5); 
+
+}
+.album-list{
+  display:inline-block;
+  padding:25px;
+  text-align: center;
+}
+
+/*span.delete-album-button{
+  display: none;
+}
+
+span.delete-album-button:hover, span.delete-album:hover + span {
+  display: block;
+  cursor: pointer;
+  color: rgb(255, 82, 82);
+}*/
+
+
+
+/* Positioning help: https://jsfiddle.net/6k2Lhaje/7/ */
+/* Transition brightening help: http://www.thebrandsmen.com/css-image-hover-effects/ */
+
+
+
