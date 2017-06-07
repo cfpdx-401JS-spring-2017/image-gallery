@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot of main List component 1`] = `
+<div
+  className="List"
+>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#84A98C",
+        "color": "#354F52",
+        "margin": "5vh 5vh",
+        "width": "25vw",
+      }
+    }
+  >
+    <h3>
+      Cool Waterfall
+    </h3>
+    <p>
+      This waterfall is located in heart of Africa near the mysterious Triad Canyon
+    </p>
+    <p>
+      ImageOne
+    </p>
+    <button
+      onClick={[Function]}
+      value={1}
+    >
+      delete
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,13 @@
+.Albums {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.newAlbum {
+    height: 10vh;
+    width: 10vh;
+    font-size: 4em;
+    text-align: center;
+    color: white;
+}
