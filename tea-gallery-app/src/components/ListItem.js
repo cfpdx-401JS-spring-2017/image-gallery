@@ -11,8 +11,8 @@ export default function ListItem(props) {
 
   return (
     <ul>
-      {props.images.map(image => (
-        <div className="list-item-wrapper" key={image.title}>
+      {props.images.map((image, i) => (
+        <div className="list-item-wrapper" key={i}>
           <li className="image-list-item">Title: {image.title}</li>
           <li className="image-list-item">Description: {image.description}</li>
           <li className="image-list-item"><a href={image.url}>Image</a></li>

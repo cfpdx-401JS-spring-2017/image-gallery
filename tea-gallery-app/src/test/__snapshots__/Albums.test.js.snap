@@ -8,24 +8,32 @@ exports[`Albums renders the Albums view 1`] = `
     <h3>
       Albums
     </h3>
-    <form
-      className="add-item"
-      onSubmit={[Function]}
+    <a
+      href="/albums/undefined"
+      onClick={[Function]}
     >
-      <label>
-        Add an album
-        <input
-          name="name"
-          onChange={[Function]}
-          placeholder="album name"
-        />
-      </label>
-      <button
-        type="submit"
-      >
-        Add
+      <button>
+        album
       </button>
-    </form>
+    </a>
   </div>
+  <form
+    className="add-item"
+    onSubmit={[Function]}
+  >
+    <label>
+      Add an album
+      <input
+        name="name"
+        onChange={[Function]}
+        placeholder="album name"
+      />
+    </label>
+    <button
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
 </div>
 `;

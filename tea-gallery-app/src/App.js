@@ -7,7 +7,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import './App.css';
-import Albums from './components/Albums';
+import AlbumsContainer from './components/AlbumsContainer';
 
 export default function App(props) {
 
@@ -31,7 +31,7 @@ export default function App(props) {
           </Link>
         </div>
         <Switch>
-          <Route path="/albums" component={Albums} />
+          <Route path="/albums" component={AlbumsContainer} />
           <Redirect to="/"/>;
         </Switch>
       </div >
