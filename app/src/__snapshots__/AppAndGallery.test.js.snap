@@ -17,28 +17,16 @@ exports[`renders a snapshot of main App component 1`] = `
 <div
   className="App"
 >
-  <button
-    onClick={[Function]}
-  >
-    Go to ThumbNail View
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Go to Gallery View
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Go to List
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Go to Form View
-  </button>
-  <div
-    className="List"
-  />
+  <div>
+    <button>
+      <a
+        className="Link"
+        href="/albums"
+        onClick={[Function]}
+      >
+        Go to Albums
+      </a>
+    </button>
+  </div>
 </div>
 `;

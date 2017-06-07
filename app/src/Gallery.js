@@ -13,7 +13,8 @@ class Gallery extends Component {
     this.scrollNext = this.scrollNext.bind(this);
     this.scrollLast = this.scrollLast.bind(this);
   }
-  
+
+
   showGallery() {
       let { galleryView } = this.state;
       galleryView = galleryView ? false : true;

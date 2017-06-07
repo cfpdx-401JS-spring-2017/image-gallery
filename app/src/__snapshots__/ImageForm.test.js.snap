@@ -21,7 +21,7 @@ exports[`renders a snapshot of main ImageForm component 1`] = `
       Description:
       <input
         className="InputField"
-        name="desc"
+        name="description"
         onChange={[Function]}
         type="text"
         value=""
