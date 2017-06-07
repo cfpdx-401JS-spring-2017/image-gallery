@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cd gallery && npm i && npm test"
+    "test": "cd app && npm i && npm test"
   },
   "repository": {
     "type": "git",
