@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddAlbum renders the AddAlbum component 1`] = `
+<form
+  className="add-item"
+  onSubmit={[Function]}
+>
+  <label>
+    Add an album
+    <input
+      name="name"
+      onChange={[Function]}
+      placeholder="album name"
+    />
+  </label>
+  <button
+    type="submit"
+  >
+    Add
+  </button>
+</form>
+`;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GalleryItem renders the GalleryItem 1`] = `
+<div
+  className="gallery-img-wrapper"
+>
+  <div>
+    <img
+      alt="tea"
+      className="gallery-img"
+      src="/../public/img/teainpot.jpg"
+    />
+    <button
+      className="back-button"
+      onClick={[Function]}
+    >
+      Back
+    </button>
+    <button
+      className="next-button"
+      onClick={[Function]}
+    >
+      Next
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+</div>
+`;
