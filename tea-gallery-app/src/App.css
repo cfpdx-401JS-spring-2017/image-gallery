@@ -1,11 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 li {
   list-style-type: none;
+}
+
+button {
+  height: 30px;
+  width: 70px;
+  margin: 0;
+  border: 1px solid grey;
+  border-radius: 15px;
+  background-color: hsla(176, 13%, 68%, 0.56);
+}
+
+button:hover {
+  background-color: hsla(176, 61%, 68%, 0.56);
+  cursor: pointer;
+}
+
+/*nav*/
+.nav {
+  text-align: center;
+}
+
+.nav button {
+  width: 12%;
+  height: 70px;
+  margin: 1%;
+  font-size: .75em;
 }
 
 .wrapper {
@@ -14,6 +42,36 @@ li {
 
 .app-header {
   text-align: center;
+  font-size: 1.3em;
+}
+
+.app-header h2, h3 {
+  margin: 2%;
+}
+
+/*albums styles*/
+.albums-view {
+  text-align: center;
+}
+
+.albums-view button {
+  width: 20%;
+  height: 60px;
+  margin: 2% 5% 0 5%;
+  font-size: 1em;
+  padding: 5px;
+}
+
+.albums-view button h3 {
+  margin: 0;
+}
+
+.view-button-wrapper {
+  margin: 2%;
+}
+
+.view-button-wrapper button {
+  margin: 1%;
 }
 
 /*Thumbnail styles*/
@@ -43,9 +101,15 @@ li {
   border: 1px solid grey;
   border-radius: 10px;
   padding: 1%;
-  width: 30%;
-  margin: 2% auto;
+  width: 25%;
+  margin: 2%;
   text-align: left;
+    display: inline-block;
+}
+
+.list-item-wrapper button {
+  margin: 0 auto; 
+  /*doesmt work*/
 }
 
 .image-list-item {
@@ -73,19 +137,20 @@ li {
 
 /*Add and delete styling*/
 
-.add-image {
+.add-item {
   margin: 5% auto;
   font-size: 2em;
-  width: 70%;
+  width: 60%;
+  font-size: 20px;
 }
 
-.add-image input {
+.add-item input {
   height: 30px;
   margin: 0 10px 10px 10px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
-.add-image button {
+.add-item button {
   width: 100px;
   height: 40px;
   border: 1px solid black;

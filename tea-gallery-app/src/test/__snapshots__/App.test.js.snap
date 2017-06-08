@@ -15,38 +15,32 @@ exports[`App renders the app 1`] = `
       <strong>
         茶
       </strong>
+       --&gt; 'Tea'
     </h3>
   </div>
-  <form
-    className="add-image"
-    onSubmit={[Function]}
+  <div
+    className="nav"
   >
-    <label>
-      Image name
-      <input
-        name="title"
-        onChange={[Function]}
-      />
-    </label>
-    <label>
-      Description
-      <input
-        name="description"
-        onChange={[Function]}
-      />
-    </label>
-    <label>
-      URL
-      <input
-        name="url"
-        onChange={[Function]}
-      />
-    </label>
-    <button
-      type="submit"
-    >
-      Add
+    <button>
+      <a
+        href="/albums"
+        onClick={[Function]}
+      >
+        <h3>
+          Albums
+        </h3>
+      </a>
     </button>
-  </form>
+    <button>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <h3>
+          Home
+        </h3>
+      </a>
+    </button>
+  </div>
 </div>
 `;
