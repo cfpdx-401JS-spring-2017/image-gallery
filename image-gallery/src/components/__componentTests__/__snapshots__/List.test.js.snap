@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div>
+  <ul
+    className="list-view"
+  >
+    <li
+      className="image-caption"
+    >
+      Z Boys
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      Zephyr skate team 1970's
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      lordsOfDogtown.jpg
+       
+    </li>
+    <li>
+      <button
+        className="delete-button"
+        onClick={[Function]}
+      >
+        DELETE IMAGE
+      </button>
+    </li>
+  </ul>
+  <ul
+    className="list-view"
+  >
+    <li
+      className="image-caption"
+    >
+      Turn Only
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      Jay Adams gets low
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      jayAdams.png
+       
+    </li>
+    <li>
+      <button
+        className="delete-button"
+        onClick={[Function]}
+      >
+        DELETE IMAGE
+      </button>
+    </li>
+  </ul>
+  <ul
+    className="list-view"
+  >
+    <li
+      className="image-caption"
+    >
+      Peggy Does Venice
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      Peggy Oki repping Zephr
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      peggyOki.jpg
+       
+    </li>
+    <li>
+      <button
+        className="delete-button"
+        onClick={[Function]}
+      >
+        DELETE IMAGE
+      </button>
+    </li>
+  </ul>
+  <ul
+    className="list-view"
+  >
+    <li
+      className="image-caption"
+    >
+      Jumping Homies
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      Mike Kolar 1970's
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      mikeKolar.jpg
+       
+    </li>
+    <li>
+      <button
+        className="delete-button"
+        onClick={[Function]}
+      >
+        DELETE IMAGE
+      </button>
+    </li>
+  </ul>
+  <ul
+    className="list-view"
+  >
+    <li
+      className="image-caption"
+    >
+      Tippin' Toes
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      Laura Thornhill in skate competition 1970's
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      lauraThornhill2.jpg
+       
+    </li>
+    <li>
+      <button
+        className="delete-button"
+        onClick={[Function]}
+      >
+        DELETE IMAGE
+      </button>
+    </li>
+  </ul>
+  <ul
+    className="list-view"
+  >
+    <li
+      className="image-caption"
+    >
+      Van Fans
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      Peggy Turner repping Vans in skate competition
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      peggyTurner.jpg
+       
+    </li>
+    <li>
+      <button
+        className="delete-button"
+        onClick={[Function]}
+      >
+        DELETE IMAGE
+      </button>
+    </li>
+  </ul>
+  <ul
+    className="list-view"
+  >
+    <li
+      className="image-caption"
+    >
+      Jumping Homies 2.0
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      Rampage Expo 1970's
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      rampage.jpg
+       
+    </li>
+    <li>
+      <button
+        className="delete-button"
+        onClick={[Function]}
+      >
+        DELETE IMAGE
+      </button>
+    </li>
+  </ul>
+  <ul
+    className="list-view"
+  >
+    <li
+      className="image-caption"
+    >
+      Custom Trucks
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      Tony Alva with custom gear
+       
+    </li>
+    <li
+      className="image-caption"
+    >
+      tonyAlva.jpg
+       
+    </li>
+    <li>
+      <button
+        className="delete-button"
+        onClick={[Function]}
+      >
+        DELETE IMAGE
+      </button>
+    </li>
+  </ul>
+</div>
+`;

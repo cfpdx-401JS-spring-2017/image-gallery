@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <a
+      href="https://en.wikipedia.org/wiki/Z-Boys"
+    >
+       
+      <img
+        alt="skateboarders"
+        className="thumbnail-image"
+        src="lordsOfDogtown.jpg"
+        style={
+          Object {
+            "height": "100px",
+            "transition": "all .2s ease-in-out",
+            "width": "100px",
+          }
+        }
+      />
+    </a>
+    <figcaption
+      className="image-caption"
+    >
+       
+      Z Boys
+       
+    </figcaption>
+    <button
+      className="delete-button"
+      onClick={[Function]}
+    >
+      DELETE IMAGE
+    </button>
+  </figure>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <a
+      href="http://www.skateboardinghalloffame.org/projects/2012-jay-adams-2/"
+    >
+       
+      <img
+        alt="skateboarders"
+        className="thumbnail-image"
+        src="jayAdams.png"
+        style={
+          Object {
+            "height": "100px",
+            "transition": "all .2s ease-in-out",
+            "width": "100px",
+          }
+        }
+      />
+    </a>
+    <figcaption
+      className="image-caption"
+    >
+       
+      Turn Only
+       
+    </figcaption>
+    <button
+      className="delete-button"
+      onClick={[Function]}
+    >
+      DELETE IMAGE
+    </button>
+  </figure>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <a
+      href="http://www.skateboardinghalloffame.org/projects/2012-peggy-oki-2/"
+    >
+       
+      <img
+        alt="skateboarders"
+        className="thumbnail-image"
+        src="peggyOki.jpg"
+        style={
+          Object {
+            "height": "100px",
+            "transition": "all .2s ease-in-out",
+            "width": "100px",
+          }
+        }
+      />
+    </a>
+    <figcaption
+      className="image-caption"
+    >
+       
+      Peggy Does Venice
+       
+    </figcaption>
+    <button
+      className="delete-button"
+      onClick={[Function]}
+    >
+      DELETE IMAGE
+    </button>
+  </figure>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <a
+      href="https://www.washingtonpost.com/news/in-sight/wp/2015/08/20/locals-only-sun-drenched-vintage-photos-show-the-dawn-of-californias-skateboarding-culture-in-the-1970s/?utm_term=.33b15ce4e7ce"
+    >
+       
+      <img
+        alt="skateboarders"
+        className="thumbnail-image"
+        src="mikeKolar.jpg"
+        style={
+          Object {
+            "height": "100px",
+            "transition": "all .2s ease-in-out",
+            "width": "100px",
+          }
+        }
+      />
+    </a>
+    <figcaption
+      className="image-caption"
+    >
+       
+      Jumping Homies
+       
+    </figcaption>
+    <button
+      className="delete-button"
+      onClick={[Function]}
+    >
+      DELETE IMAGE
+    </button>
+  </figure>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <a
+      href="http://www.skateboardinghalloffame.org/projects/2013-laura-thornhill-caswell/"
+    >
+       
+      <img
+        alt="skateboarders"
+        className="thumbnail-image"
+        src="lauraThornhill2.jpg"
+        style={
+          Object {
+            "height": "100px",
+            "transition": "all .2s ease-in-out",
+            "width": "100px",
+          }
+        }
+      />
+    </a>
+    <figcaption
+      className="image-caption"
+    >
+       
+      Tippin' Toes
+       
+    </figcaption>
+    <button
+      className="delete-button"
+      onClick={[Function]}
+    >
+      DELETE IMAGE
+    </button>
+  </figure>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <a
+      href=""
+    >
+       
+      <img
+        alt="skateboarders"
+        className="thumbnail-image"
+        src="peggyTurner.jpg"
+        style={
+          Object {
+            "height": "100px",
+            "transition": "all .2s ease-in-out",
+            "width": "100px",
+          }
+        }
+      />
+    </a>
+    <figcaption
+      className="image-caption"
+    >
+       
+      Van Fans
+       
+    </figcaption>
+    <button
+      className="delete-button"
+      onClick={[Function]}
+    >
+      DELETE IMAGE
+    </button>
+  </figure>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <a
+      href={undefined}
+    >
+       
+      <img
+        alt="skateboarders"
+        className="thumbnail-image"
+        src="rampage.jpg"
+        style={
+          Object {
+            "height": "100px",
+            "transition": "all .2s ease-in-out",
+            "width": "100px",
+          }
+        }
+      />
+    </a>
+    <figcaption
+      className="image-caption"
+    >
+       
+      Jumping Homies 2.0
+       
+    </figcaption>
+    <button
+      className="delete-button"
+      onClick={[Function]}
+    >
+      DELETE IMAGE
+    </button>
+  </figure>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <a
+      href="http://www.skateboardinghalloffame.org/projects/tony-alva/"
+    >
+       
+      <img
+        alt="skateboarders"
+        className="thumbnail-image"
+        src="tonyAlva.jpg"
+        style={
+          Object {
+            "height": "100px",
+            "transition": "all .2s ease-in-out",
+            "width": "100px",
+          }
+        }
+      />
+    </a>
+    <figcaption
+      className="image-caption"
+    >
+       
+      Custom Trucks
+       
+    </figcaption>
+    <button
+      className="delete-button"
+      onClick={[Function]}
+    >
+      DELETE IMAGE
+    </button>
+  </figure>
+</div>
+`;

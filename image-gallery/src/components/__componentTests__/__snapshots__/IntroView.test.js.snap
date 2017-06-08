@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div
+  className="intro-image brighten"
+>
+  <a
+    className="video"
+    href="https://www.youtube.com/watch?v=cKC-XBwQ_pA"
+  >
+    <img
+      alt="standing on boards"
+      src="introImage.jpg"
+    />
+  </a>
+  <span
+    className="play-video"
+  >
+    <h1>
+      PLAY VIDEO
+    </h1>
+  </span>
+</div>
+`;

@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div>
+  <span
+    className="arrow"
+    onClick={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "fontSize": "50px",
+      }
+    }
+  >
+    ←
+  </span>
+  <span
+    className="arrow"
+    onClick={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "fontSize": "50px",
+      }
+    }
+  >
+    →
+  </span>
+  <div>
+    <img
+      alt="skateboarder"
+      className="images"
+      src="lordsOfDogtown.jpg"
+    />
+    <p
+      className="image-caption"
+    >
+      Z Boys
+    </p>
+    <p
+      className="image-caption"
+    >
+      Zephyr skate team 1970's
+       
+    </p>
+    <button
+      className="delete-button"
+      onClick={[Function]}
+    >
+      DELETE IMAGE
+    </button>
+  </div>
+</div>
+`;
