@@ -9,7 +9,7 @@ import './App.css';
 import Albums from './components/Albums';
 
 export default function App(props) {
-
+  
   return (
     <Router>
       <div className="App" >
