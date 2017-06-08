@@ -1,11 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import App from '../App';
+import GalleryItem from '../components/GalleryItem';
 
 describe('App', () => {
   it('renders the app', () => {
     const component = renderer.create(<App/>);
-import GalleryItem from '../components/GalleryItem';
+
 
 const images = [
   {
