@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+
   "scripts": {
     "test": "cd tea-gallery-app && npm i && npm test"
   },

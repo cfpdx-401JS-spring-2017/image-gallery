@@ -70,3 +70,24 @@ li {
 .back-button {
   float: left;
 }
+
+/*Add and delete styling*/
+
+.add-image {
+  margin: 5% auto;
+  font-size: 2em;
+  width: 70%;
+}
+
+.add-image input {
+  height: 30px;
+  margin: 0 10px 10px 10px;
+  font-size: 25px;
+}
+
+.add-image button {
+  width: 100px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+}

@@ -32,6 +32,7 @@ class Wrapper extends Component {
           </button>)}
         <View
           images={this.props.images}
+          onDeleteImage={this.props.onDeleteImage}
         />
       </div >
     );
