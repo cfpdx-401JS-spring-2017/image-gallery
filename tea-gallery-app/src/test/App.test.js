@@ -6,6 +6,8 @@ import GalleryItem from '../components/GalleryItem';
 describe('App', () => {
   it('renders the app', () => {
     const component = renderer.create(<App/>);
+      });
+  });
 
 
 const images = [
