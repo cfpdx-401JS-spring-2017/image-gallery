@@ -27,4 +27,3 @@ db.getCollection('albums').update({}, { $set: { images.2._id: ObjectId() } } { m
 Do this for as many objects as you have in each album {index 0, 1, ...}. In this case, the above lines will cover you.
 
 ### Objectives:
-
