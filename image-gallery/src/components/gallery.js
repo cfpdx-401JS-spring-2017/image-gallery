@@ -39,8 +39,8 @@ class Gallery extends Component {
       <div>
         <img src={this.props.images[this.state.indexTracker].url} alt={'Riot Grrrl'} />
         <h1>{this.props.images[this.state.indexTracker].title}</h1>
-        <button onClick={this.decrement}>Back</button>
-        <button onClick={this.increment}>Next</button>
+        <button onClick={this.decrement}>back</button>
+        <button onClick={this.increment}>next</button>
       </div>
     );
   }
