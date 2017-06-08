@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg"
+      style={
+        Object {
+          "height": "100px",
+          "width": "100px",
+        }
+      }
+    />
+    <figcaption>
+       
+      Cute Bunny
+       
+    </figcaption>
+  </figure>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-25__605.jpg"
+      style={
+        Object {
+          "height": "100px",
+          "width": "100px",
+        }
+      }
+    />
+    <figcaption>
+       
+      Cuter Bunny
+       
+    </figcaption>
+  </figure>
+  <figure
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <img
+      alt=""
+      src="http://static.boredpanda.com/blog/wp-content/uploads/2015/09/cute-bunnies-110__605.jpg"
+      style={
+        Object {
+          "height": "100px",
+          "width": "100px",
+        }
+      }
+    />
+    <figcaption>
+       
+      Cutest Bunny
+       
+    </figcaption>
+  </figure>
+</div>
+`;

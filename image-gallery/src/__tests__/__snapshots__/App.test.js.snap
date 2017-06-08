@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div>
+  <div
+    className="header-title"
+  >
+    <header>
+      <h1>
+        WELCOME TO THE FUZZY BUNNY IMAGE GALLERY
+      </h1>
+    </header>
+    <h2>
+      Check out all the bunnies...
+    </h2>
+    <span>
+      <button
+        className="view-buttons"
+        onClick={[Function]}
+      >
+        CHECK OUT LIST VIEW
+      </button>
+    </span>
+    <span>
+      <button
+        className="view-buttons"
+        onClick={[Function]}
+      >
+        CHECK OUT THUMBNAIL VIEW
+      </button>
+    </span>
+    <span>
+      <button
+        className="view-buttons"
+        onClick={[Function]}
+      >
+        CHECK OUT SINGLE VIEW
+      </button>
+    </span>
+  </div>
+</div>
+`;

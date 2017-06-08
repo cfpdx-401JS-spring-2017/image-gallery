@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div>
+  <span
+    className="nextBunny"
+    onClick={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "fontSize": "50px",
+      }
+    }
+  >
+    ←
+  </span>
+  <span
+    className="previousBunny"
+    onClick={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "fontSize": "50px",
+      }
+    }
+  >
+    →
+  </span>
+  <div>
+    <img
+      alt=""
+      className="images"
+      src="http://f.cl.ly/items/3g3J1G0w122M360w380O/3726490195_f7cc75d377_o.jpg"
+    />
+    <p>
+      Cute Bunny
+    </p>
+    <p>
+      Isn't it fuzzy-wuzzy cutest thing you've ever seen?
+       
+    </p>
+  </div>
+</div>
+`;
