@@ -5,27 +5,28 @@ class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      views: ['gallery', 'thumbnail', 'list'],
-      view: 'thumbnail'
+      views: ['Gallery', 'Thumbnail', 'ListItem'],
+      view: 'Thumbnail'
     }
   }
 
   render() {
+    const {view} = this.state;
     return (
-      const {view} = this.state;
-
-    <nav>
-      <ul className='nav'>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to={`/gallery?view=${view}`}>
-          Gallery
+      <nav>
+        <ul className='Nav'>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to={`/Gallery?view=${view}`}>
+            Gallery
           </Link>
-        </li>
-        <li><Link to={`/list?view=${view}`}>
-        </Link>
-        </li>
-      </ul>
-    </nav>
+          </li>
+          <li><Link to={`/ListItem?view=${view}`}>
+          </Link>
+          </li>
+        </ul>
+      </nav>
     );
   }
 }
+
+export default Nav;

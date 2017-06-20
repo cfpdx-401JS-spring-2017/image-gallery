@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
-import './styles/App.css';
+import { 
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
+
+import Nav from './header/Nav';
 import images from './data';
 import Wrapper from './components/Wrapper'
 
+import './styles/App.css';
 
 class App extends Component {
   constructor() {
@@ -37,11 +45,17 @@ class App extends Component {
 
     return (
       <div className="App">
+        <route component={Nav}/>
         <Wrapper
           data={this.state.data}
           handleSubmit={this.handleSubmit}
           handleDelete={this.handleDelete}
         />
+        <Switch>
+          <Route exact path='/' component={Thumbnail}/>
+          <Route path='/Gallery' component={Gallery}/>
+          <Route path='/ListItem' component={ListItem}/>
+        </Switch>
       </div>
     );
   }
