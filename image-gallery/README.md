@@ -105,6 +105,9 @@ In most cases bumping the `react-scripts` version in `package.json` and running 
 
 We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
 
+To Load the database with images check out the resources in DB-RELOAD-RESOURCES.
+Just run the test in dbtest.js to load images into mongo.
+
 ## Sending Feedback
 
 We are always open to [your feedback](https://github.com/facebookincubator/create-react-app/issues).

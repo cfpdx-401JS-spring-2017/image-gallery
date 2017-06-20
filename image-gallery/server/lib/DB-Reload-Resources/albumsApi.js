@@ -82,4 +82,4 @@ const albums = [
     }
 ]
 
-module.exports = albums
+module.exports = albums;
