@@ -26,7 +26,7 @@ const images = [
 
 describe('Thumbnail', () => {
   it('renders images as thumbnails', () => {
-    const tree = renderer.create(<Thumbnail data={images} />).toJSON();
+    const tree = renderer.create(<thumbnail data={images} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
