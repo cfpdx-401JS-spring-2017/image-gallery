@@ -5,7 +5,7 @@ class ListItem extends Component {
 
   render() {
    let {images}= this.props;
-   if (!images.length) return <div> loading... </div>
+   if (!{images}.length) return <div> loading... </div>
 
    return(
      <div className='ListItem'>
