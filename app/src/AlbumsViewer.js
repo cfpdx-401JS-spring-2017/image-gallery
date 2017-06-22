@@ -5,6 +5,7 @@ import ThumbNail from './ThumbNail';
 import Gallery from './Gallery';
 import ImageForm from './ImageForm';
 
+//new
 class AlbumsViewer extends Component {
   constructor(props) {
     super(props);
