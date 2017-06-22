@@ -8,7 +8,7 @@ class Thumbnail extends Component {
     return (
       <div>
         {images.map(image => (
-          <ul>
+          <ul key={image.title}>
             <li>{image.title}</li>
             <li><img src={image.url} alt={'Riot Grrrl'} height= {100} width= {100} /></li>
           </ul>
