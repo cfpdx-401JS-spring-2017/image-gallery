@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Thumbnail from '../components/thumbnail';
+import ListItem from '../components/ListItem';
 
 const images = [
 
@@ -24,9 +24,9 @@ const images = [
 ];
 
 
-describe('Thumbnail', () => {
-  it('renders images as thumbnails', () => {
-    const tree = renderer.create(<Thumbnail data={images} />).toJSON();
+describe('ListItem', () => {
+  it('lists images as items', () => {
+    const tree = renderer.create(<ListItem data={images} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
