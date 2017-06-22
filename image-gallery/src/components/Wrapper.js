@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ListItem from './ListItem';
-import Gallery from './Gallery';
-import Thumbnail from './Thumbnail';
+import Gallery from './gallery';
+import Thumbnail from './thumbnail';
 
 class Wrapper extends Component {
   constructor() {
