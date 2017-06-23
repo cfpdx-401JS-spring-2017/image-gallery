@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrapper renders default view and navigation buttons 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    Thumbnail View
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Gallery View
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    List View
+  </button>
+  <ListItem
+    images={
+      Array [
+        Object {
+          "description": "Kathleen Hanna",
+          "title": "Riot Grrrl 1",
+          "url": "http://www.newyorker.com/wp-content/uploads/2012/11/121126_r22838_g2048-1200.jpg",
+        },
+        Object {
+          "description": "Corrin Tucker",
+          "title": "Riot Grrrl 2",
+          "url": "https://s-media-cache-ak0.pinimg.com/originals/a1/1a/d9/a11ad9fb2cf4c687fcb1212db5da342c.jpg",
+        },
+        Object {
+          "description": "Every Grrrl",
+          "title": "Riot Grrrl 3",
+          "url": "https://www.speakertv.com/wp-content/uploads/2015/01/every-girl-is-a-riot-girl.jpg",
+        },
+      ]
+    }
+  />
+</div>
+`;

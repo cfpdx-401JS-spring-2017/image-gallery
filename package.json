@@ -1,0 +1,19 @@
+{
+  "name": "image-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd image-gallery && npm i && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mofo37/image-gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mofo37/image-gallery/issues"
+  },
+  "homepage": "https://github.com/mofo37/image-gallery#readme"
+}
