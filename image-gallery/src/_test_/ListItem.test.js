@@ -26,7 +26,7 @@ const images = [
 
 describe('ListItem', () => {
   it('lists images as items', () => {
-    const tree = renderer.create(<ListItem data={images} />).toJSON();
+    const tree = renderer.create(<ListItem images={images} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

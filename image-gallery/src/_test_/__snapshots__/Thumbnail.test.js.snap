@@ -2,7 +2,7 @@
 
 exports[`Thumbnail renders images as thumbnails 1`] = `
 <thumbnail
-  data={
+  images={
     Array [
       Object {
         "description": "Kathleen Hanna",
