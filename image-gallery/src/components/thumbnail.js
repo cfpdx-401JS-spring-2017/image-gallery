@@ -7,11 +7,12 @@ class Thumbnail extends Component {
 
     return (
       <div>
-        {images.map(image => (
-          <ul key={image._id}>
+        {images.map((image, i) => (
+          <ul key={i}>
             <li>{image.title}</li>
             <li><img src={image.url} alt={'Riot Grrrl'} height={150} width={150} /></li>
             <button onClick={() => {
+              console.log('meow');
               handleDelete(image._id)}
               }>Delete
             </button>
