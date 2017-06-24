@@ -8,6 +8,11 @@ exports[`renders a snapshot 1`] = `
     <button
       onClick={[Function]}
     >
+      Add An Image!
+    </button>
+    <button
+      onClick={[Function]}
+    >
       Thumbnail View
     </button>
     <button

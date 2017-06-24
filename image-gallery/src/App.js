@@ -11,7 +11,21 @@ class App extends Component {
     this.state = {
       data: [],
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+
   };
+
+  handleSubmit(newImage) {
+    this.setState({ data: [...this.state.data, newImage] })
+  }
+
+  handleDelete(id) {
+    console.log('whatuppppp');
+   images.delete(id)
+    .then(() => this.forceUpdate())
+}
 
   componentDidMount() {
     images.get()
@@ -24,7 +38,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Wrapper data={this.state.data}/>
+        <Wrapper
+          data={this.state.data}
+          handleSubmit={this.handleSubmit}
+          handleDelete={this.handleDelete}
+        />
       </div>
     );
   }
