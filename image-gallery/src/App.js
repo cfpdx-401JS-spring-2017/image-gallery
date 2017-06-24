@@ -30,6 +30,7 @@ class App extends Component {
   }
 
   handleDelete(id) {
+    console.log('whatuppppp');
    images.delete(id)
     .then(() => this.forceUpdate())
 }

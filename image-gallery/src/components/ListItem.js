@@ -9,8 +9,8 @@ class ListItem extends Component {
 
    return(
      <div className='ListItem'>
-       {images.map(image => ( 
-       <ul key={image.title}>
+       {images.map((image, i) => ( 
+       <ul key={i}>
          <li>{image.title}</li>
          <li>{image.description}</li>
          <li>{image.url}</li>

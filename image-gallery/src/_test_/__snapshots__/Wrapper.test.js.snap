@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrapper renders default view and navigation buttons 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    Add An Image!
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Thumbnail View
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Gallery View
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    List View
+  </button>
+  <ListItem />
+</div>
+`;
