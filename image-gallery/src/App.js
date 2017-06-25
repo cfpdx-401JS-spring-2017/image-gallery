@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import { 
+  // eslint-disable-next-line
   BrowserRouter as Router,
   Route,
   Switch,
+  // eslint-disable-next-line
   Redirect
 } from 'react-router-dom';
 
-import Nav from './header/Nav';
 import images from './data';
-import Wrapper from './components/Wrapper'
+import Wrapper from './components/Wrapper';
+import Thumbnail from './components/thumbnail';
+import ListItem from './components/ListItem';
+import Gallery from './components/gallery';
 
 import './styles/App.css';
 
@@ -46,17 +50,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <route component={Nav}/>
         <Wrapper
           data={this.state.data}
           handleSubmit={this.handleSubmit}
           handleDelete={this.handleDelete}
         />
-        <Switch>
-          <Route exact path='/' component={Thumbnail}/>
-          <Route path='/Gallery' component={Gallery}/>
-          <Route path='/ListItem' component={ListItem}/>
-        </Switch>
       </div>
     );
   }
