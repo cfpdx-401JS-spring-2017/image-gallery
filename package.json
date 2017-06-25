@@ -1,19 +1,22 @@
 {
   "name": "image-gallery",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cd image-gallery && npm i && npm test"
+    "test": "cd app && npm i && npm test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mofo37/image-gallery.git"
+    "url": "git+https://github.com/kawallis/image-gallery.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mofo37/image-gallery/issues"
+    "url": "https://github.com/kawallis/image-gallery/issues"
   },
-  "homepage": "https://github.com/mofo37/image-gallery#readme"
+  "homepage": "https://github.com/kawallis/image-gallery#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
