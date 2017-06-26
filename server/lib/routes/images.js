@@ -4,7 +4,7 @@ const Image = require('../models/image');
 
 router
 
-.get('/',(res, req, next) => {
+.get('/api/images',(res, req, next) => {
   Image.find()
     .then(images => res.send(images))
     .catch(next);
