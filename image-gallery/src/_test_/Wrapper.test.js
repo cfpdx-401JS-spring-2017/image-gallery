@@ -27,7 +27,7 @@ const images = [
 describe('Wrapper', () => {
   it('renders default view and navigation buttons', () => {
     const wrapper = shallow(
-      <Wrapper data={images} />
+      <Wrapper images={images} />
     );
     expect(toJSON(wrapper)).toMatchSnapshot();
   });
